@@ -1,0 +1,8 @@
+{
+  "name": "TFA",
+  "version": "1.0.0",
+  "description": "Teach for America Website Project",
+  "main": "server.js",
+  "author": "Obviouslee Marketing Hosea Sandstrom",
+  "license": "MIT"
+}
