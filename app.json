@@ -1,10 +1,6 @@
 {
   "name": "demo-v1",
   "description": "Demo V1",
-  "engines": {
-  "node": "7.x",
-  "npm": "3.10.10"
-},
   "scripts": {
   },
   "env": {
