@@ -90,8 +90,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/*.scss www/main.css",
     "postinstall": "bower cache clean && bower install",
-    "prod:start": "heroku local",
-    "heroku-postbuild": "webpack --watch & nodemon server.js"
+    "prod:start": "heroku local"
   },
   "repository": {
     "type": "git",
