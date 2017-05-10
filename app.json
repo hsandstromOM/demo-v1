@@ -1,24 +1,20 @@
 {
-  "name": "parkBacon",
-  "description": "CHS Parks Conservancy website",
+  "name": "demo-v1",
+  "description": "Demo V1",
+  "engines": {
+  "node": "7.x",
+  "npm": "3.10.10"
+},
   "scripts": {
   },
   "env": {
-    "MAILGUN_PASS": {
-      "required": true
-    },
-    "MAILGUN_USER": {
-      "required": true
-    }
+    "NPM_CONFIG_PRODUCTION": { "required": true },
   },
   "formation": {
     "web": {
       "quantity": 1
     }
   },
-  "addons": [
-    "ssl"
-  ],
   "buildpacks": [
     {
       "url": "heroku/nodejs"

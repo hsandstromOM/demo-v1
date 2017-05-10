@@ -35,7 +35,7 @@ angular.module('app', [
                 space: 't2wg3bafv0z8',
                 accessToken: '4ea268c4881b7dd9851ab42d784589b65ad86b5c60c82582972a57504b5f8e0d',
             });
-            $urlRouterProvider.otherwise('/*');
+            $urlRouterProvider.otherwise('/');
             $stateProvider
                 .state('site', require('./components/layout'))
                 // .state('site.404', require('./components/templates/404/404-controller'))

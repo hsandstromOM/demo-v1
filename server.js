@@ -43,9 +43,10 @@ app.use(bodyParser.json());       // to support JSON-encoded bodies
 // 	return next();
 // };
 
-if (app.get('env') === 'production') {
-	app.use(forceSsl);
-} else if (app.get('env') !== 'production') {
+// if (app.get('env') === 'production') {
+// 	app.use(forceSsl);
+// } else
+if (app.get('env') !== 'production') {
 	// Use a nice logger in development
 	const logger = require('morgan');
 	app.use(logger('dev'));
