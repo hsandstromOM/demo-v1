@@ -3,4 +3,3 @@ node_modules
 .env
 .sass-cache
 ssl
-npm-debug.log

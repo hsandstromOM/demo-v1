@@ -33,7 +33,7 @@ const server = app.listen(app.get('port'), function() {
 // Set the static asset directory
 app.use(gzippo.staticGzip(`${__dirname}/www`));
 app.use(cors());
-app.use(prerender).set('prerenderServiceUrl', 'https://www.demo-v1-herokuapp.com').set('prerenderToken', process.env.PRERENDER_TOKEN);
+app.use(prerender).set('prerenderServiceUrl', 'https://www.demo-v1-om-herokuapp.com').set('prerenderToken', process.env.PRERENDER_TOKEN);
 app.use(bodyParser.json());       // to support JSON-encoded bodies
 
 // const forceSsl = function(req, res, next) {
