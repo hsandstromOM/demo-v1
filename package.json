@@ -91,7 +91,7 @@
     "build-css": "node-sass --include-path scss scss/*.scss www/main.css",
     "postinstall": "bower cache clean && bower install",
     "prod:start": "heroku local",
-    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
+    "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress"
   },
   "repository": {
     "type": "git",
