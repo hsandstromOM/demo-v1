@@ -3,9 +3,6 @@
   "description": "Demo V1",
   "scripts": {
   },
-  "env": {
-    "NPM_CONFIG_PRODUCTION": { "required": true },
-  },
   "formation": {
     "web": {
       "quantity": 1
