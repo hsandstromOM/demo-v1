@@ -1,0 +1,93 @@
+#renovationDetail {
+  #topDiv {
+    padding:0 !important;
+  }
+  .mobileHeroImage {
+    margin: auto;
+  }
+  .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .renovationBody {
+    color: #718A50;
+  }
+  .line {
+    height: 20px;
+  }
+  .parkFinder {
+    width: 85%;
+    background-color: #718A50;
+    border: none !important;
+    display: block;
+    margin: 0 auto;
+  }
+  .greyBorder {
+    border-top: 2px solid;
+    margin-top: 25px;
+    width: 33% !important;
+  }
+  .greyText {
+    line-height: 50px;
+    width: 33%;
+    text-align: center;
+  }
+  .greyBorder2 {
+    border-top: 2px solid;
+   margin-top: 25px;
+   width: 33% !important;
+   float: right;
+  }
+  #galleryTileContainer {
+    clear: both;
+    padding-left: 0;
+    padding-right: 0;
+    display:
+    flex; justify-content:
+    space-between;
+    flex-wrap: wrap;
+  }
+  .parkAngelInfoBox {
+    text-align: center;
+    float: right;
+  }
+  .upComingEventsHeader {
+    margin-top: 30px;
+    padding-bottom: 10px;
+    color: #718A50;
+    border-bottom: 1px solid black;
+    width: 100%;
+    text-align: center;
+  }
+  .eventBlock {
+    display: block; width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid black;
+  }
+  .eventGetInvolvedButton {
+    margin-top: 10px;
+  }
+  .parkAngelLogo {
+    display: block;
+    margin: 0 auto;
+    margin-top: 0px;
+  }
+  .omGrey {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+}
+
+.galleryTitle {
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+    background-size: cover;
+    cursor: pointer;
+    display: inline-block !important;
+}
+
+.eventBlock {
+    text-align: left;
+}

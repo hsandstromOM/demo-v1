@@ -1,0 +1,75 @@
+#volPartial {
+  .parkAngelInfoBox {
+    text-align: center;
+  }
+  .logo {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .volunteer {
+    padding-bottom: 20px;
+    color: white !important;
+  }
+  .withThe {
+    font-size: 18px;
+    color: white !important;
+  }
+  .conservancy {
+    color: white !important;
+  }
+}
+.donateModal {
+  width: 100%;
+  margin: 0 auto;
+}
+.modalBody {
+  display: block;
+  float: left;
+  padding: 20px;
+  width: 100%;
+  background-color: white;
+}
+.unknownPartial {
+  display: block;
+  float: left;
+  width: 100%;
+}
+.galleryPartialImage {
+  width: 100%;
+  cursor: pointer;
+}
+.eventModalHeader {
+  text-align:center;
+  display:block;
+  float:left;
+  width: 100%;
+  padding:20px;
+  position:relative;
+  color: white;
+  background-image:url('img/leafveinOverlay.png');
+}
+.formAssemblyPartialImg {
+  position: absolute;
+  right: 20px;
+  color: white;
+  z-index: 10;
+}
+.communityGardenPopupTitle {
+  font-size: 30px;
+  letter-spacing: 2px;
+  width: 100%;
+}
+.modalBody.iframe-container {
+  padding-left: 0px;
+  padding-right: 20px;
+  padding-bottom: 150px;
+  padding-top: 20px;
+  background-color: white;
+  width: 100%;
+}
+// .iframe-frame {
+//   background-color: white;
+//   float: left;
+//   height: 1357px;
+// }

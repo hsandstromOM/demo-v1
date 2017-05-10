@@ -1,0 +1,50 @@
+#benchPage {
+  .benchDedicationTitle {
+    line-height: 60px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    text-align: center;
+    width: 100%;
+    margin-top: 30px; margin-bottom: 50px;
+    font-size: 1.25em;
+  }
+  .benchIcon {
+    width: 30px;
+    margin-right: 20px;
+    margin-top: -5px;
+  }
+  .reserveBench {
+    line-height: 60px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.25em;
+  }
+  .parkAngelInfoBox {
+    text-align: center;
+    padding-top: 60px;
+  }
+  .omGrey .center {
+    cursor: pointer;
+  }
+  .photoGalleryText{
+    margin-top: 30px;
+    padding-bottom: 10px;
+    color: #718A50 !important;
+    width: 100%;
+    text-align: center;
+  }
+  .photoGalleryImages {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid black;
+  }
+  .galleryArrow {
+    color: grey;
+    cursor: pointer;
+  }
+}

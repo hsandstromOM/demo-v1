@@ -1,0 +1,336 @@
+#benchPage {
+
+    .safariSpace {
+        display: none;
+    }
+
+    .safariSpace,
+    _::-webkit-:not(:root:root) {
+        display: block;
+        width: 100%;
+        height: 2px;
+    }
+}
+
+.getInvolvedButton {
+    display: inline-block;
+    clear: both;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    background-color: #718A50;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+#programsPage {
+    #blackOpacityOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        background-color: black;
+        opacity: .5;
+        z-index:49;
+    }
+    #waitListModal {
+        z-index:50;
+        position: absolute;
+        top:100px;
+        right: 0;
+        left: 0;
+        margin-right: auto;
+        margin-left: auto; height: auto;
+        max-width: 800px;
+        width: 100%;
+        -webkit-box-shadow: 0px 4px 23px 0px rgba(50, 50, 50, 1);
+        -moz-box-shadow:    0px 4px 23px 0px rgba(50, 50, 50, 1);
+        box-shadow:         0px 4px 23px 0px rgba(50, 50, 50, 1);
+        #wait-list-title {
+            font-size: 30px;
+            letter-spacing: 2px;
+            width: 100%;
+            text-align: center;
+            line-height: 30px;
+            font-family: "clarendon-wide", sans-serif;
+        }
+        #wait-list-x {
+            position: absolute;
+            right: 20px;
+            color: white;
+            z-index: 10;
+        }
+        #iframeContainer {
+            padding-left: 0px;
+            padding-right: 20px;
+            padding-bottom: 150px;
+            padding-top: 20px;
+            background-color: white;
+            width: 100%;
+            height: 1200px;
+        }
+        #calIframe {
+            background-color: white;
+            float: left;
+            height: 850px;
+        }
+    }
+    .eventModalHeader {
+        text-align:center;
+        display:block;
+        float:left;
+        width: 100%;
+        padding:20px;
+        position:relative;
+        color: white;
+        background-image: url('img/orangeWood.jpg');
+    }
+    .safariSpace {
+        display: none;
+    }
+
+    .safariSpace,
+    _::-webkit-:not(:root:root) {
+        display: block;
+        width: 100%;
+        height: 2px;
+    }
+    .programsFirstImage {
+      margin-bottom: 0;
+    }
+    .volunteerOption {
+      color: #718A50;
+      border-bottom: 1px solid #718A50;
+      padding: 5px;
+    }
+    .optionTopRow {
+      line-height: 75px;
+      height: 50px;
+      cursor: pointer;
+      padding: 5px;
+    }
+    .futuraHeavy {
+      font-weight:700;
+      font-size: 15px;
+      color:#718A50;
+      margin-top: 20px;
+      line-height: 30px;
+    }
+    .optionArrow {
+      display:inline-block;
+      float:right;
+      margin-top:25px;
+      width: 10px;
+    }
+    .optionExtraInfo {
+      padding-left: 35px;
+      padding-top: 5px;
+      color: grey;
+      padding-right: 10px;
+    }
+    .optionExtraInfoText {
+      padding-bottom: 10px;
+      color: #718A50 !important;
+      padding-right: 10px;
+    }
+    .optionalBody {
+      color: grey !important;
+    }
+    .optionExtraInfoText2 {
+      color: grey;
+    }
+    #renovationProgramText {
+      padding: 20px;
+      padding-left: 100px;
+    }
+    #renovationTileContainer {
+      padding: 30px;
+    }
+    .renovationTile {
+      padding: 10px;
+      position:
+      relative;
+      height: 270px;
+    }
+    .storyInfo {
+      float: left;
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      padding:10px;
+      right:10px;
+      background: rgba(90,98,93, 0.8);
+    }
+    .storyTitle {
+      color: white;
+      font-weight: 700;
+      line-height: 16px;
+      font-size: 16.5px;
+    }
+    .readMore {
+      text-decoration: underline;
+      display: inline-block;
+      font-weight: 400;
+      font-decoration: italic;
+      padding-top: 0px;
+      color: white;
+      cursor: pointer;
+    }
+    .storyImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .renovationSectionHeader {
+      font-size: 18px;
+      line-height: 25px;
+      color: #718A50;
+    }
+    .renovationSectionDescription {
+      color: grey;
+    }
+    .getInvolvedButton {
+      cursor: pointer;
+      color: white;
+      background-color: #718A50;
+      margin-left: 30px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      text-align: center; border-radius: none;
+    }
+
+    .programsContent {
+        padding: 10px;
+    }
+
+    .programsImage {
+        padding: 0;
+        width: 100vw;
+    }
+
+    .programsBanner {
+        padding: 20px;
+        background-image: url('img/greenWood.jpg');
+        color: white;
+        text-align: center;
+    }
+
+    svg {
+        fill: #728a50;
+    }
+
+    .absoluteIcon {
+        position: absolute;
+        top: 10px;
+        left: 5px;
+
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    @media (max-width:667px) {
+        .waysToVolunteerColumn {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+
+        .optionExtraInfoText .getInvolvedButton {
+            margin-left: 80px;
+        }
+
+        .modalBody {
+            padding-bottom: 125px !important;
+        }
+    }
+
+    .parkGardenCheckBox {
+        display: inline-block;
+        float: left;
+        margin-right: 5px !important;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #5d635a;
+        color: #5d635a;
+        font-size: 12px;
+    }
+
+    .garden {
+        color: #5d635a;
+    }
+    .program-description {
+        font-weight: bold;
+        color: #718A50;
+    }
+    .program-body {
+        padding-left: 22px;
+    }
+    .garden-name {
+        font-weight: bold;
+        color: #718A50;
+    }
+    .garden-description {
+        ul {
+            font-weight: bold;
+            color: #828282;
+        }
+    }
+    .resizeThis {
+      width: 100% !important;
+      min-height: 900px;
+    }
+}
+
+.communityGardenPopupTitle {
+    text-align: center;
+    line-height: 30px;
+}
+@media only screen and (max-width: 425px) {
+    .programsBanner {
+        height: 170px;
+    }
+
+    .programsBanner h4 {
+        margin-bottom: 15px;
+        padding: 1px;
+        font-size: 7vw;
+        line-height: 1.2em;
+    }
+
+    .programsBanner p {
+        font-size: 4vw;
+    }
+
+    #programsPage .programsContent {
+        padding: 0;
+    }
+}
+
+#waitListModal .modalHeader p {
+    margin: 0;
+    line-height: 1em;
+}
+.whatWeDo {
+  color: #718A50;
+  font-weight: 400;
+  font-size: 25px;
+  padding-bottom: 30px;
+  padding-top: 15px;
+  padding-bottom: 40px;
+  line-height: 20px;
+  background-color: #F4F6F1;
+  border-bottom: 1px solid #718A50;
+  p {
+    color: #718A50;
+    font-weight: 400;
+    font-size: 25px;
+    margin-left: 12%;
+  }
+}
+.parkRenovations {
+  border-top: 1px solid #718A50;
+}

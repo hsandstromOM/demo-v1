@@ -1,0 +1,148 @@
+#homePage {
+  margin-top: -5%;
+
+  .heroRight {
+    padding-left: 4px;
+    padding-right: 0px;
+  }
+
+  .heroLeft {
+    padding-right: 4px;
+    padding-left: 0px;
+  }
+
+  .donBtn,
+  .volBtn {
+    cursor: pointer;
+    width: 47%;
+    position: absolute;
+    bottom: 0;
+    height: 66px;
+  }
+
+  .donBtn {
+    right: 0;
+  }
+
+  .myCarouselImg img {
+    width: auto;
+    height: 225px;
+    max-height: 225px;
+  }
+  .col-sm-12,
+  .col-sm-6 {
+    padding: 0;
+  }
+
+  .col-sm-12 {
+    text-align: center;
+  }
+
+  h2 {
+    font-family: "futura-pt", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #5D635A;
+    letter-spacing: 4px;
+    font-weight: heavy;
+  }
+
+  .overlayHero {
+    padding: 3%;
+    background-color: rgba(255, 255, 255, .85);
+    position: absolute;
+    top: 30%;
+    left: 12.5%;
+    text-align: center;
+    display: inline-block;
+    width: 75%;
+    -moz-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .parksLogo {
+    padding: 1%;
+    width: 250px;
+  }
+
+  .navLogo {
+    margin-top: -50px;
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+@media only screen and (max-width : 991px) {
+  #homePage {
+    .navLogo,
+    .parksLogo {
+      display: none;
+    }
+
+    .heroLeft,
+    .heroRight {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    .col-sm-6 {
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width : 375px) {
+  #homePage {
+    .heroLeft,
+    .heroRight {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    .navLogo,
+    .parksLogo {
+      display: none;
+    }
+
+    .overlayHero {
+      top: 25%;
+      padding: 2%;
+    }
+
+    h2 {
+      letter-spacing: 2px;
+      font-size: 18px;
+      margin-bottom: 0;
+      margin-top: -5%;
+    }
+  }
+}
+@media only screen and (max-width : 441px) {
+  #homePage {
+    .heroLeft,
+    .heroRight {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    .navLogo,
+    .parksLogo {
+      display: none;
+    }
+
+    .overlayHero {
+      top: 25%;
+      padding: 2%;
+    }
+
+    h2 {
+      letter-spacing: 2px;
+      font-size: 18px;
+      margin-bottom: 0;
+      margin-top: -5%;
+    }
+
+    .mobileHero {
+      top: 18%;
+    }
+  }
+}

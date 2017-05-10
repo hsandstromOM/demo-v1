@@ -1,0 +1,47 @@
+#plantListDetail {
+  .plantHead {
+    margin: 40px;
+    text-align: center;
+    color: #728a50;
+  }
+  .plantImage {
+    width: 100px;
+    height: 100px;
+  }
+  .btn-black {
+    color: white;
+    margin-left: 10px;
+    background-color: #4797B5;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .plantElement {
+    text-align: center;
+  }
+
+  .plant-list-cta {
+    text-align: center;
+    clear: both;
+  }
+}
+@media print and (color) {
+  .navFooterBottom,
+  .navFooterTop,
+  .plant-list-cta,
+  .sharedNavHeader {
+    display: none;
+  }
+  #plantListDetail {
+    padding-bottom: 0 !important;
+  }
+  .plantElement {
+    display: inline-block;
+  }
+  .plantHead h3,
+  .plantLatinName,
+  .plantCommonName {
+    color: #718A50 !important;
+  }
+}

@@ -1,0 +1,11 @@
+<div class="donateModal">
+    <div class="modalBody">
+        <div class="unknownPartial">
+            <uib-carousel active="active" data-interval="myInterval">
+                <uib-slide data-ng-repeat="thumbnailGallery in renoCtrl.currentRenovation.fields.thumbnailGallery | orderBy:'last'" index="$index">
+                    <img data-ng-src="{{thumbnailGallery.fields.file.url}}" class="galleryPartialImage">
+                </uib-slide>
+            </uib-carousel>
+        </div>
+    </div>
+</div>

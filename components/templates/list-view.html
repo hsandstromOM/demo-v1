@@ -1,0 +1,58 @@
+<div id="listView">
+  <div>
+    <div>
+      <img class="desktopImageSizing" data-ng-src="{{listCtrl.contentfulData.fields.hero.fields.file.url}}" alt="{{listCtrl.contentfulData.fields.hero.fields.description || listCtrl.contentfulData.fields.hero.fields.title}}">
+      <img class="mobile-hero-image" data-ng-src="{{listCtrl.contentfulData.fields.mobileHero[0].fields.file.url || listCtrl.contentfulData.fields.mobileHero.fields.file.url}}">
+    </div>
+  </div>
+  <div class="greenBanner">
+    <div class="thin">ABOUT THE CONSERVANCY</div>
+    <h4>{{listCtrl.contentfulData.fields.bannerTitle | uppercase}}</h4>
+    <p>{{listCtrl.contentfulData.fields.bannerText}}</p>
+  </div>
+  <div class="parkAngelPage">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 clearfix">
+          <a class="col-md-4 col-sm-6" data-ng-repeat="member in listCtrl.allMembers | orderBy: 'fields.priority'" data-ng-href="/{{listCtrl.detailHref}}/{{member.fields.slug}}">
+            <div>
+              <div>
+                <img class="memberAvatar" data-ng-src="{{member.fields.image.fields.file.url}}" alt="{{member.fields.image.fields.description || member.fields.image.fields.title}}">
+              </div>
+              <h4 class="staffName">{{member.fields.name}}</h4>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 clearfix">
+          <div class="center-text">
+            <img alt="" data-ng-src="//images.contentful.com/tmgf48hvolpe/3ZJjz0sYsUu2IMWkSIec4Y/075a9bc76912d7d79ca8e704579cbbd3/parkAngelsLogo.jpg" src="//images.contentful.com/tmgf48hvolpe/3ZJjz0sYsUu2IMWkSIec4Y/075a9bc76912d7d79ca8e704579cbbd3/parkAngelsLogo.jpg">
+            <p class="tk-futura-pt omGrey" data-marked="contactCtrl.sideBarData.fields.sidebarMessage">
+              <p>The dynamic undertaking of expanding, sustaining, and reinvigorating Charleston's urban parks would not be possible without the citizens who donate their time and money to out msision: The Park Angels.</p>
+              <p>Though there are plenty of opportunities to put on a pair of work gloves, being a Park Angel can mean more that just 'getting dirty'. Park Angels are also community organizers, event planners, meeting facilitators, environmental educators,
+                gardeners, ambassadors of the Charleston Parks Conservancy mission, and active donors.</p>
+            </p>
+            <h5 clas="omGrey center" data-marked="contactCtrl.sideBarData.fields.sidebarLink"><p><a href="/donate">Ready to get your wings?</a></p>
+                    </h5>
+            <volunteerbtn></volunteerbtn>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="parkAngelAddressDiv">
+      <div class="contact tk-clarendon-wide">CONTACT INFORMATION</div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <!-- <div class="addressDiv"> -->
+          <div class="col-md-6">
+            <h6 class="CPCaddress">Charleston Parks Conservancy</h6>
+            <p class="CPCaddressDetail">{{listCtrl.contentfulContactData.fields.address}}
+            <p class="CPCaddressDetail">{{listCtrl.contentfulContactData.fields.cityStateAndZipCode}}</p>
+            <p class="CPCaddressDetail">{{listCtrl.contentfulContactData.fields.phoneNumber}}</p>
+          </div>
+        <!-- </div> -->
+      </div>
+    </div>
+
+  </div>
+</div>

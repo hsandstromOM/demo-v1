@@ -1,0 +1,27 @@
+{
+  "name": "parkBacon",
+  "description": "CHS Parks Conservancy website",
+  "scripts": {
+  },
+  "env": {
+    "MAILGUN_PASS": {
+      "required": true
+    },
+    "MAILGUN_USER": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "ssl"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
