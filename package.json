@@ -85,12 +85,13 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "webpack --watch & nodemon server.js",
+    "start": "node server.js",
     "dev": "webpack --watch & nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/*.scss www/main.css",
     "postinstall": "bower cache clean && bower install",
-    "prod:start": "heroku local"
+    "prod:start": "heroku local",
+    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
   },
   "repository": {
     "type": "git",
