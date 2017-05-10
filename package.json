@@ -85,7 +85,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "node server.js",
+    "start": "webpack --watch & nodemon server.js",
     "dev": "webpack --watch & nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/*.scss www/main.css",
