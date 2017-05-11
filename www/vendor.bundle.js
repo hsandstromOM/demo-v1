@@ -58,12 +58,10 @@
 	__webpack_require__(200);
 	__webpack_require__(202);
 	__webpack_require__(203);
-	// require('ngMap');
 	__webpack_require__(205);
 	__webpack_require__(207);
 	__webpack_require__(209);
 	__webpack_require__(210);
-	// require('./components/mailChimp');
 	__webpack_require__(213);
 	__webpack_require__(214);
 
