@@ -9,8 +9,6 @@ angular.module('app', [
         'angular-jwt',
         'angucomplete-alt',
         'contentful',
-        'mailchimp',
-        'ngMap',
         'ui.bootstrap',
         'angularUtils.directives.dirPagination',
         'stripe.checkout',

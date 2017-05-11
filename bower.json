@@ -1,23 +1,20 @@
 {
-  "name": "parks-refactor",
-  "description": "[REFACTOR] - Website for the Charleston Parks Conservancy",
+  "name": "demo-v1-om",
+  "description": "Demo V1",
   "main": "server.js",
   "authors": [
     "OM"
   ],
   "license": "ISC",
   "keywords": [
-    "bacon"
+    "demov1"
   ],
-  "homepage": "https://github.com/obviouslee/parks-refactor",
+  "homepage": "https://github.com/hsandstromOM/demo-v1.git",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "angular-mailchimp": "^0.0.4"
-  }
+  ]
 }

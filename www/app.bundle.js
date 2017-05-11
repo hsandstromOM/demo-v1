@@ -47,7 +47,7 @@
 	const ee = __webpack_require__(1);
 	const moment = window.moment;
 	const underscore = window.underscore;
-	angular.module('app', ['ngResource', 'ngSanitize', 'ui.router', 'angular-storage', 'angular-jwt', 'angucomplete-alt', 'contentful', 'mailchimp', 'ngMap', 'ui.bootstrap', 'angularUtils.directives.dirPagination', 'stripe.checkout', 'hc.marked', 'slugifier', '720kb.socialshare']).constant('ee', ee).constant('moment', moment).constant('underscore', underscore).config(['$urlRouterProvider', '$stateProvider', 'contentfulProvider', 'StripeCheckoutProvider', '$locationProvider', '$compileProvider', function ($urlRouterProvider, $stateProvider, contentfulProvider, StripeCheckoutProvider, $locationProvider, $compileProvider) {
+	angular.module('app', ['ngResource', 'ngSanitize', 'ui.router', 'angular-storage', 'angular-jwt', 'angucomplete-alt', 'contentful', 'ui.bootstrap', 'angularUtils.directives.dirPagination', 'stripe.checkout', 'hc.marked', 'slugifier', '720kb.socialshare']).constant('ee', ee).constant('moment', moment).constant('underscore', underscore).config(['$urlRouterProvider', '$stateProvider', 'contentfulProvider', 'StripeCheckoutProvider', '$locationProvider', '$compileProvider', function ($urlRouterProvider, $stateProvider, contentfulProvider, StripeCheckoutProvider, $locationProvider, $compileProvider) {
 	    // Performance improvement/cleaner markup
 	    // https://medium.com/swlh/improving-angular-performance-with-1-line-of-code-a1fb814a6476
 	    $compileProvider.debugInfoEnabled(false);

@@ -3,14 +3,6 @@
   "description": "Demo V1",
   "scripts": {
   },
-  "env": {
-    "MAILGUN_PASS": {
-      "required": true
-    },
-    "MAILGUN_USER": {
-      "required": true
-    }
-  },
   "formation": {
     "web": {
       "quantity": 1
