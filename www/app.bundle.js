@@ -59,7 +59,7 @@
 	        space: 't2wg3bafv0z8',
 	        accessToken: '4ea268c4881b7dd9851ab42d784589b65ad86b5c60c82582972a57504b5f8e0d'
 	    });
-	    $urlRouterProvider.otherwise('/');
+	    $urlRouterProvider.otherwise('/*');
 	    $stateProvider.state('site', __webpack_require__(163))
 	    // .state('site.404', require('./components/templates/404/404-controller'))
 	    .state('site.home', __webpack_require__(165));
@@ -26640,10 +26640,6 @@
 		contentful.entries('content_type=homePage').then(function (res) {
 			console.log(res);
 			$scope.home = res.data.items[0];
-			vm.gallery = response.data.items[0].fields.gallery;
-			vm.gallery.forEach(function (image, idx) {
-				image.index = idx;
-			});
 		});
 		contentful.entries('content_type=homePage').then(function (res) {
 			var seoData = res.data.items[0];

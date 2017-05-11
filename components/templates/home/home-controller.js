@@ -10,14 +10,9 @@ function HomeController($scope, $state, store, $window, contentful) {
 	var vm = this;
   $window.scrollTo(0, 0);
 
-
 	contentful.entries('content_type=homePage').then(function(res) {
 		console.log(res);
 		$scope.home = res.data.items[0];
-		vm.gallery = response.data.items[0].fields.gallery;
-				vm.gallery.forEach(function(image, idx) {
-					image.index = idx;
-				});
 	});
 	contentful.entries('content_type=homePage').then(function(res) {
 		var seoData = res.data.items[0];
@@ -39,7 +34,7 @@ function HomeController($scope, $state, store, $window, contentful) {
 	});
 
 	vm.allMembers = [];
-	
+
 	contentful.entries('content_type=teamMember').then(function(res) {
 		console.log(res);
 		var entries = res.data
