@@ -27,6 +27,14 @@ function HomeController($scope, $state, store, $window, contentful) {
 				}
 			}
 		}
+		if (seoData.fields.seoKeywords) {
+			var meta = document.getElementsByTagName("meta");
+			for (var i = 0; i < meta.length; i++) {
+				if (meta[i].name.toLowerCase() === "keywords") {
+					meta[i].content = seoData.fields.seoKeywords;
+				}
+			}
+		}
 	});
 	contentful.entries('content_type=servicesPage').then(function(res) {
 		console.log(res);
