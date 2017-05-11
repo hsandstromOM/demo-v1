@@ -1,7 +1,15 @@
 {
-  "name": "demV1",
-  "description": "Demo V1",
+  "name": "parkBacon",
+  "description": "CHS Parks Conservancy website",
   "scripts": {
+  },
+  "env": {
+    "MAILGUN_PASS": {
+      "required": true
+    },
+    "MAILGUN_USER": {
+      "required": true
+    }
   },
   "formation": {
     "web": {

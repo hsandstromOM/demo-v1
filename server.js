@@ -33,20 +33,19 @@ const server = app.listen(app.get('port'), function() {
 // Set the static asset directory
 app.use(gzippo.staticGzip(`${__dirname}/www`));
 app.use(cors());
-app.use(prerender).set('prerenderServiceUrl', 'https://www.demo-v1-om-herokuapp.com').set('prerenderToken', process.env.PRERENDER_TOKEN);
+app.use(prerender).set('prerenderServiceUrl', 'https://demo-v1-om.herokuapp.com/').set('prerenderToken', process.env.PRERENDER_TOKEN);
 app.use(bodyParser.json());       // to support JSON-encoded bodies
 
-// const forceSsl = function(req, res, next) {
-// 	if (req.headers['x-forwarded-proto'] !== 'https') {
-// 		return res.redirect(['https://', req.get('Host'), req.url].join(''));
-// 	}
-// 	return next();
-// };
+const forceSsl = function(req, res, next) {
+	if (req.headers['x-forwarded-proto'] !== 'https') {
+		return res.redirect(['https://', req.get('Host'), req.url].join(''));
+	}
+	return next();
+};
 
-// if (app.get('env') === 'production') {
-// 	app.use(forceSsl);
-// } else
-if (app.get('env') !== 'production') {
+if (app.get('env') === 'production') {
+	app.use(forceSsl);
+} else if (app.get('env') !== 'production') {
 	// Use a nice logger in development
 	const logger = require('morgan');
 	app.use(logger('dev'));

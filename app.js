@@ -14,7 +14,7 @@ angular.module('app', [
         'stripe.checkout',
         'hc.marked',
         'slugifier',
-        '720kb.socialshare',
+        '720kb.socialshare'
     ])
     .constant('ee', ee)
     .constant('moment', moment)
