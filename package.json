@@ -89,9 +89,7 @@
     "dev": "webpack --watch & nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/*.scss www/main.css",
-    "postinstall": "bower cache clean && bower install",
-    "prod:start": "heroku local",
-    "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress & node server.js"
+    "postinstall": "bower cache clean && bower install"
   },
   "repository": {
     "type": "git",
