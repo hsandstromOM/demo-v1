@@ -50,4 +50,11 @@ function HomeController($scope, $state, store, $window, contentful) {
 				vm.allMembers.push(entry)
 		});
 	});
+
+	var angle = 0;
+	vm.galleryspin = function(sign) {
+	spinner = document.querySelector("#spinner");
+	if (!sign) { angle = angle + 45; } else { angle = angle - 45; }
+	spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
+	}
 }
