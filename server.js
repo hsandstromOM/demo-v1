@@ -20,6 +20,7 @@ const app = express();
 const router = new express.Router();
 const mg = require('nodemailer-mailgun-transport');
 const nodemailer = require ('nodemailer');
+const compression = require('compression');
 
 // Set the port
 app.set('port', process.env.PORT || 5000);
