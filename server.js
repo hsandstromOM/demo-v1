@@ -10,6 +10,7 @@ const path = require('path');
 const apiRoutes = require('./routes/api');
 const redirectRoutes = require('./routes/redirects');
 const prerender = require('prerender-node');
+const compression = require('compression');
 const gzippo = require('gzippo');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -20,7 +21,7 @@ const app = express();
 const router = new express.Router();
 const mg = require('nodemailer-mailgun-transport');
 const nodemailer = require ('nodemailer');
-const compression = require('compression');
+
 
 // Set the port
 app.set('port', process.env.PORT || 5000);
@@ -33,6 +34,7 @@ const server = app.listen(app.get('port'), function() {
 
 // Set the static asset directory
 app.use(gzippo.staticGzip(`${__dirname}/www`));
+app.use(compression(`${__dirname}/www`));
 app.use(cors());
 app.use(prerender).set('prerenderServiceUrl', 'https://demo-v1-om.herokuapp.com/').set('prerenderToken', process.env.PRERENDER_TOKEN);
 app.use(bodyParser.json());       // to support JSON-encoded bodies
