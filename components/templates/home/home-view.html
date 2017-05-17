@@ -45,18 +45,18 @@ div#carousel ~ span:hover { color: #888; cursor: pointer; }
   <div></div>
   <div class="home-page jumbotron">
     <div class="fluid-container">
-      <h1>To infinity and beyond</h1>
-      <p class="para">When you're curious, you find lots of interesting things to do.</p>
+      <h1>{{home.fields.bannerHeadline}}</h1>
+      <p class="para">{{home.fields.bannerSubHeadline}}</p>
       <hr>
       <div class="social center-block">
         <ul>
-            <li><a ng-href="https://www.facebook.com/{{footer.fields.facebookUrl}}" target="_blank">
+            <li><a ng-href="{{footer.fields.facebookUrl}}" target="_blank">
                 <i class="fa fa-2x fa-facebook"></i>
             </a></li>
-            <li><a href="https://twitter.com/{{footer.fields.twitterUrl}}" target="_blank">
+            <li><a href="{{footer.fields.twitterUrl}}" target="_blank">
                 <i class="fa fa-2x fa-twitter"></i>
             </a></li>
-            <li><a href="https://www.youtube.com/{{footer.fields.youtubeUrl}}" target="_blank">
+            <li><a href="{{footer.fields.youTubeUrl}}" target="_blank">
                 <i class="fa fa-2x fa-youtube"></i>
             </a></li>
             <li><a href="{{footer.fields.instagramUrl}}" target="_blank">
@@ -237,26 +237,6 @@ div#carousel ~ span:hover { color: #888; cursor: pointer; }
         </div>
       </div>
   </div>
-
-
-  <h2 class="section-title"><strong>Our Team</strong></h2>
-
-  <!-- <div class="container"> -->
-    <div class="row">
-      <!-- <div class="col-md-8 clearfix"> -->
-        <a class="col-md-3" data-ng-repeat="member in homeCtrl.allMembers | orderBy: 'fields.priority'" data-ng-href="/{{homeCtrl.detailHref}}/{{member.fields.slug}}" style="text-align:center;">
-          <div>
-            <div>
-              <img class="img-circle" data-ng-src="{{member.fields.teamMemberImage.fields.file.url}}" alt="{{member.fields.teamMemberImage.fields.description || member.fields.teamMemberImage.fields.title}}">
-            </div>
-            <h3><strong>{{member.fields.firstName}} {{member.fields.lastName}}</strong></h3>
-            <em>{{member.fields.teamMemberTitle}}</em>
-          </div>
-        </a>
-      <!-- </div> -->
-    </div>
-  <!-- </div> -->
-
   <br/>
   <hr/>
      </div>

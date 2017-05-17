@@ -9,7 +9,7 @@ function TeamMemberController($scope, $stateParams, $state, store, contentful, $
     $window.scrollTo(0, 0);
 
     var vm = this;
-    var allQuery = "content_type=team";
+    var allQuery = "content_type=teamMember";
     var memberQuery = allQuery + "&fields.slug=" + $state.params.slug;
 
     vm.allMembers = [];

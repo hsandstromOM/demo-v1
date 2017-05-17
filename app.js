@@ -56,10 +56,10 @@ angular.module('app', [
                 // .state('site.volunteer', require('./components/templates/volunteer/volunteer-controller'))
                 // .state('site.conservancy', require('./components/templates/conservancy/conservancy-controller'))
                 // .state('site.donate', require('./components/templates/donate/donate-controller'))
-                // .state('site.board-list', require('./components/templates/board/board-list-controller'))
+                .state('site.board-list', require('./components/templates/board/board-list-controller'))
                 // .state('site.staff-list', require('./components/templates/staff/staff-list-controller'))
                 // .state('site.staff-member', require('./components/templates/staff/staff-member-controller'))
-                // .state('site.board-member', require('./components/templates/board/board-member-controller'))
+                .state('site.board-member', require('./components/templates/board/board-member-controller'))
                 // .state('site.privacy-policy', require('./components/templates/privacy-policy/privacy-policy-controller'));
             $locationProvider.html5Mode({
                 enabled: true,

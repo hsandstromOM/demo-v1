@@ -8,6 +8,7 @@ module.exports = {
 // @ngInject
 function HomeController($scope, $state, store, $window, contentful) {
 	var vm = this;
+	  // vm.detailHref = 'team-member';
   $window.scrollTo(0, 0);
 
 	contentful.entries('content_type=homePage').then(function(res) {
@@ -41,15 +42,15 @@ function HomeController($scope, $state, store, $window, contentful) {
 		$scope.services = res.data.items[0];
 	});
 
-	vm.allMembers = [];
-
-	contentful.entries('content_type=teamMember').then(function(res) {
-		console.log(res);
-		var entries = res.data
-		entries.items.forEach(function(entry) {
-				vm.allMembers.push(entry)
-		});
-	});
+	// vm.allMembers = [];
+	//
+	// contentful.entries('content_type=teamMember').then(function(res) {
+	// 	console.log(res);
+	// 	var entries = res.data
+	// 	entries.items.forEach(function(entry) {
+	// 			vm.allMembers.push(entry)
+	// 	});
+	// });
 
 	var angle = 0;
 	vm.galleryspin = function(sign) {

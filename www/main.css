@@ -1,13 +1,15 @@
-@import url('http://fonts.googleapis.com/css?family=Tangerine"');
 .navbar {
   margin-bottom: -20px;
 }
 
 .home-page {
-  background-image: url("http://www.yorkshirebusinesscentre.co.uk/wp-content/uploads/2013/01/Hire-Desk-Space-For-Day1-e1359302462688.jpg");
+  background-image: url("/images/dock.jpeg");
   background-size: cover;
   height: 855px;
   opacity:.90;
+}
+.team {
+  padding-top:50px;
 }
 
 .navbar-header {
@@ -152,7 +154,7 @@ hr {
   background-color: #909AA0;
   font-size: 22px;
   text-align: center;
-  padding-top: 12px;
+  padding-top: 10px;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
