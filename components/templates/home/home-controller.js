@@ -57,4 +57,14 @@ function HomeController($scope, $state, store, $window, contentful) {
 	if (!sign) { angle = angle + 45; } else { angle = angle - 45; }
 	spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
 	}
+	$("#AboutButton").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".about-page").offset().top},
+        'slow');
+});
+  $("#PortfolioButton").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".portfolio").offset().top},
+        'slow');
+			});
 }
