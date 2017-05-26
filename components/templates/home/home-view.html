@@ -212,17 +212,27 @@ div#carousel ~ span:hover { color: #888; cursor: pointer; }
   <span style="float:right" class="ss-icon" ng-click="homeCtrl.galleryspin('')">&gt;</span>
 </div> -->
 <div class="container">
-<button
-    class="snipcart-add-item"
-    data-item-id="2"
-    data-item-name="Bacon"
-    data-item-price="3.00"
-    data-item-weight="20"
-    data-item-url="https://demo-v1-om.herokuapp.com/"
-    data-item-description="Some fresh bacon">
-        Buy bacon
-</button>
-</div>
+    <div class="row">
+          <div class="col-md-3" data-ng-repeat="product in homeCtrl.allProducts" style="text-align:center;">
+            <div>
+              <div>
+                <img class="img-circle" data-ng-src="{{product.fields.dataItemImage.fields.file.url}}" alt="{{product.fields.dataItemImage.fields.description || product.fields.dataItemImage.fields.title}}">
+              </div>
+              <h3><strong>{{product.fields.dataItemName}} ${{product.fields.dataItemPrice}}</strong></h3>
+              <button
+                    class="snipcart-add-item"
+                    data-ng-repeat="product in homeCtrl.allProducts"
+                    data-item-id="{{product.fields.dataItemId}}"
+                    data-item-name="{{product.fields.dataItemName}}"
+                    data-item-price="{{product.fields.dataItemPrice}}"
+                    data-item-url="https://demo-v1-om.herokuapp.com/"
+                    data-item-description="Some fresh bacon">
+                        Buy bacon
+                </button>
+            </div>
+          </div>
+      </div>
+    </div>
   <div class="container">
   <h2 class="section-title"><strong>Our Services</strong></h2>
     <div class="row">

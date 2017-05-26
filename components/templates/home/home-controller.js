@@ -42,6 +42,18 @@ function HomeController($scope, $state, store, $window, contentful) {
 		$scope.services = res.data.items[0];
 	});
 
+	vm.allProducts = [];
+	vm.detailHref = 'product';
+
+	contentful.entries('content_type=products').then(function(res) {
+		console.log(res);
+		var entries = res.data
+		entries.items.forEach(function(entry) {
+				vm.allProducts.push(entry)
+		});
+	});
+
+
 	// vm.allMembers = [];
 	//
 	// contentful.entries('content_type=teamMember').then(function(res) {
