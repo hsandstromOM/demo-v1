@@ -65,7 +65,7 @@ function render(req, res, template) {
 function handleAppPage(req, res) {
 	var requestUrl = req.url;
 	if (requestUrl === '/') requestUrl = '/layout.html';
-	const page = fs.readFileSync(`${__dirname}/templates/app.html`, 'utf-8');
+	const page = fs.readFileSync(`${__dirname}/templates/layout.html`, 'utf-8');
 	render(req, res, page);
 }
 
