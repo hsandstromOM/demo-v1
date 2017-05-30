@@ -19,7 +19,7 @@ module.exports = {
     output: {
         path: outputPath,
         publicPath: 'www/',
-        filename: '[name]${process.env.NODE_ENV === 'production' ? '.min' : ''}.js'
+        filename: '[name].bundle.js'
     },
     devtool: 'source-map',
     module: {

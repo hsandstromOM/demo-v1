@@ -1,26 +1,28 @@
 <div id="aboutPage">
-  <div>
-    <img class="desktopImageSizing" data-ng-src="{{aboutCtrl.contentfulData.fields.hero[0].fields.file.url}}" alt="{{aboutCtrl.contentfulData.fields.hero.fields.description || aboutCtrl.contentfulData.fields.hero[0].fields.title}}">
-    <img class="mobile-hero-image" data-ng-src="{{aboutCtrl.contentfulData.fields.mobileHero[0].fields.file.url}}" alt="{{aboutCtrl.contentfulData.fields.mobileHero[0].fields.description}}">
+  <div class="team">
+    <div>
+    <img data-ng-src="{{aboutCtrl.contentfulData.fields.fullSizeImage.fields.file.url}}" alt="{{aboutCtrl.contentfulData.fields.fullSizeImage.fields.description || aboutCtrl.contentfulData.fields.hero[0].fields.title}}">
+    <img class="mobile-hero-image" data-ng-src="{{aboutCtrl.contentfulData.fields.thumbnail.fields.file.url}}" alt="{{aboutCtrl.contentfulData.fields.thumbnail.fields.description}}">
   </div>
-  <div class="greenBanner">
-    <h4>{{aboutCtrl.contentfulData.fields.bannerHeader | uppercase}}</h4>
-    <p>{{aboutCtrl.contentfulData.fields.bannerText}}</p>
-  </div>
-  <div class="container aboutContent">
-    <div class="row">
-      <div class="col-md-8 col-sm-8">
-        <p id="bodyHeader" data-marked="aboutCtrl.contentfulData.fields.bodyHeader"></p>
-        <p id="parentAboutUsP" data-marked="aboutCtrl.contentfulData.fields.body"></p>
-      </div>
-      <div class="col-md-1"></div>
-      <div class="col-md-4 sidebarVolunteer">
-        <div class="center-text">
-          <p class="subtitle fancy tk-futura-pt">
-            <span>{{aboutCtrl.contentfulData.fields.sidebarHeader}}</span>
-          </p>
-          <p class="sidebar-mission">{{aboutCtrl.contentfulData.fields.sidebarBlock}}</p>
-          <volunteerbtn></volunteerbtn>
+    <div class="greenBanner">
+      <h4>{{aboutCtrl.contentfulData.fields.title | uppercase}}</h4>
+      <p>{{aboutCtrl.contentfulData.fields.bannerText}}</p>
+    </div>
+    <div class="container aboutContent">
+      <div class="row">
+        <div class="col-md-8 col-sm-8">
+          <p id="bodyHeader" data-marked="aboutCtrl.contentfulData.fields.title"></p>
+          <p id="parentAboutUsP" data-marked="aboutCtrl.contentfulData.fields.body"></p>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-4 sidebarVolunteer">
+          <div class="center-text">
+            <p class="subtitle fancy tk-futura-pt">
+              <span>{{aboutCtrl.contentfulData.fields.sidebarHeader}}</span>
+            </p>
+            <p class="sidebar-mission">{{aboutCtrl.contentfulData.fields.sidebarBlock}}</p>
+            <volunteerbtn></volunteerbtn>
+          </div>
         </div>
       </div>
     </div>

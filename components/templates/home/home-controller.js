@@ -8,7 +8,6 @@ module.exports = {
 // @ngInject
 function HomeController($scope, $state, store, $window, contentful) {
 	var vm = this;
-	  // vm.detailHref = 'team-member';
   $window.scrollTo(0, 0);
 
 	contentful.entries('content_type=homePage').then(function(res) {
@@ -37,10 +36,10 @@ function HomeController($scope, $state, store, $window, contentful) {
 			}
 		}
 	});
-	contentful.entries('content_type=servicesPage').then(function(res) {
-		console.log(res);
-		$scope.services = res.data.items[0];
-	});
+	// contentful.entries('content_type=servicesPage').then(function(res) {
+	// 	console.log(res);
+	// 	$scope.services = res.data.items[0];
+	// });
 
 	vm.allProducts = [];
 	vm.detailHref = 'product';
@@ -63,21 +62,21 @@ function HomeController($scope, $state, store, $window, contentful) {
 	// 			vm.allMembers.push(entry)
 	// 	});
 	// });
-
-	var angle = 0;
-	vm.galleryspin = function(sign) {
-	spinner = document.querySelector("#spinner");
-	if (!sign) { angle = angle + 45; } else { angle = angle - 45; }
-	spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
-	}
-	$("#AboutButton").click(function() {
-    $('html,body').animate({
-        scrollTop: $(".about-page").offset().top},
-        'slow');
-});
-  $("#PortfolioButton").click(function() {
-    $('html,body').animate({
-        scrollTop: $(".portfolio").offset().top},
-        'slow');
-			});
+//
+// 	var angle = 0;
+// 	vm.galleryspin = function(sign) {
+// 	spinner = document.querySelector("#spinner");
+// 	if (!sign) { angle = angle + 45; } else { angle = angle - 45; }
+// 	spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
+// 	}
+// 	$("#AboutButton").click(function() {
+//     $('html,body').animate({
+//         scrollTop: $(".about-page").offset().top},
+//         'slow');
+// });
+//   $("#PortfolioButton").click(function() {
+//     $('html,body').animate({
+//         scrollTop: $(".portfolio").offset().top},
+//         'slow');
+// 			});
 }

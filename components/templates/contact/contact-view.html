@@ -1,15 +1,7 @@
 <div id="contactPage">
-  <div>
-    <section>
-      <img class="desktopImageSizing" data-ng-src="{{contactCtrl.sideBarData.fields.hero.fields.file.url}}" alt="{{contactCtrl.sideBarData.fields.hero.fields.description || contactCtrl.sideBarData.fields.hero[0].fields.title}}">
-      <img class="mobile-hero-image" data-ng-src="{{contactCtrl.sideBarData.fields.mobileHero[0].fields.file.url}}" alt="{{contactCtrl.sideBarData.fields.mobileHero[0].fields.description}}">
-    </section>
-  </div>
-  <div class="greenBanner">
-    <h4>CONTACT US</h4>
-    <p>For questions about the Conservancy, ways to get involved, ways to support your parks, or just to say hi, please fill out the form below.</p>
-  </div>
+  <div class="team">
   <h2><strong>Contact Us</strong></h2>
+
   <br/>
     <form class="contact-form">
        <div class="container">
@@ -34,18 +26,23 @@
        </form>
           <div class="emailConfirmationLayer" data-ng-show="contactCtrl.showConfirmationLayer">
             <h2 class="tk-clarendon-wide">SUCCESS!</h2>
-            <p class="futuraHeavy text-uppercase">Thanks for your interest in the Charleston Parks Conservancy. We'll get back to you just as soon as we can.</p>
+            <p class="futuraHeavy text-uppercase">Thanks for your interest!</p>
             <p>Return to our
               <a href="/">homepage.</a>
             </p>
           </div>
           <div class="emailConfirmationLayer" data-ng-show="contactCtrl.showErrorLayer">
             <h2 class="tk-clarendon-wide">WE'RE SORRY!</h2>
-            <p class="futuraHeavy text-uppercase">An error occurred while trying to deliver your message through the website. You can reach us at info@charlestonparksconservancy.org.</p>
+            <p class="futuraHeavy text-uppercase">An error occurred while trying to deliver your message through the website.</p>
             <p>Return to our
               <a href="/">homepage.</a>
             </p>
           </div>
-        </form>
-
+          <section>
+          <div id='map'></div>
+        </section>
       </div>
+</div>
+<br/>
+<br/>
+<br/>

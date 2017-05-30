@@ -5,12 +5,12 @@ module.exports = {
 	controllerAs: 'aboutCtrl'
 }
 
-function AboutController(contentful, $window) {
+function AboutController($scope, $state, store, contentful, $window) {
 	var vm = this;
 
 	$window.scrollTo(0, 0);
 
-	contentful.entries('content_type=aboutUs').then(function(res) {
+	contentful.entries('content_type=aboutPage').then(function(res) {
 		vm.contentfulData = res.data.items[0];
 		if (vm.contentfulData.fields.pageTitleSeo) {
 			document.title = vm.contentfulData.fields.pageTitleSeo;
@@ -24,13 +24,4 @@ function AboutController(contentful, $window) {
 			}
 		}
 	});
-	// Set margin bottom for navShortView
-	window.addEventListener('scroll', setMargin);
-	setMargin();
-
-	function setMargin() {
-		var navShortView = document.getElementsByClassName("navShortView")[0].clientHeight + 50;
-		var pageId = document.getElementById("aboutPage");
-		if (navShortView && pageId) pageId.setAttribute("style", "padding-bottom:" + navShortView + "px;");
-	};
 }

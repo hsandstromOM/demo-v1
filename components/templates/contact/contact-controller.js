@@ -5,13 +5,21 @@ module.exports = {
 	controllerAs: 'contactCtrl'
 }
 
-function ContactController(contentful, $window, $state, $http, $timeout) {
+function ContactController(contentful, $window, $state, $http, $timeout, $scope) {
 	var vm = this;
 	$window.scrollTo(0, 0);
 	vm.showConfirmationLayer = false;
 	vm.showErrorLayer = false;
 
-	contentful.entries('content_type=contactUs&include=3').then(function(res) {
+	mapboxgl.accessToken = 'pk.eyJ1IjoiaG9zZWEtc2FuZHN0cm9tIiwiYSI6ImNqM2J3eW91aTAwNDEyd3BmeWJ0eXV5ODUifQ.dVR5zV-pArYiQKYWVqvS7Q';
+	const map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/streets-v9', //stylesheet location
+    center: [-79.9434814, 32.796544], // starting position
+    zoom: 9 // starting zoom
+});
+
+	contentful.entries('content_type=contactPage&include=3').then(function(res) {
 		vm.sideBarData = res.data.items[0];
 		vm.contactFormSubjects = vm.sideBarData.fields.contactFormSubjects;
 		if (vm.sideBarData.fields.pageTitleSeo) {
@@ -26,6 +34,7 @@ function ContactController(contentful, $window, $state, $http, $timeout) {
 			}
 		}
 	});
+
 
 	vm.submitForm = function(formValid) {
 		if (formValid) {
@@ -89,18 +98,9 @@ function ContactController(contentful, $window, $state, $http, $timeout) {
 			default:
 				return {
 					recipientName: 'Inquiries',
-					recipientEmail: 'info@charlestonparksconservancy.org',
+					recipientEmail: 'hosea@obviouslee.com',
 					title: reason
 				};
 		}
 	}
-	// Set margin bottom for navShortView
-	window.addEventListener('scroll', setMargin);
-	setMargin();
-
-	function setMargin() {
-		var navShortView = document.getElementsByClassName("navShortView")[0].clientHeight + 30;
-		var pageId = document.getElementById("contactPage");
-		if (navShortView && pageId) pageId.setAttribute("style", "padding-bottom:" + navShortView + "px;");
-	};
 }

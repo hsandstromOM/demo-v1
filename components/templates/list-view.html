@@ -1,21 +1,19 @@
 <div id="listView">
   <div class="team">
-<div class="container">
+    <div class="container">
       <h2 class="section-title"><strong>Our Team</strong></h2>
-          <div class="container">
-            <div class="row">
-              <!-- <div class="col-md-8 clearfix"> -->
-                <a class="col-md-3" data-ng-repeat="member in listCtrl.allMembers | orderBy: 'fields.priority'" data-ng-href="/{{listCtrl.detailHref}}/{{member.fields.slug}}" style="text-align:center;">
-                  <div>
-                    <div>
-                      <img class="img-circle" data-ng-src="{{member.fields.teamMemberImage.fields.file.url}}" alt="{{member.fields.teamMemberImage.fields.description || member.fields.teamMemberImage.fields.title}}">
-                    </div>
-                    <h3><strong>{{member.fields.firstName}} {{member.fields.lastName}}</strong></h3>
-                    <em>{{member.fields.teamMemberTitle}}</em>
-                  </div>
-                </a>
-              <!-- </div> -->
+      <div class="container">
+        <div class="row">
+          <a class="col-md-3" data-ng-repeat="member in listCtrl.allMembers | orderBy: 'fields.priority'" data-ng-href="/{{listCtrl.detailHref}}/{{member.fields.slug}}" style="text-align:center;">
+            <div>
+              <div>
+                <img class="img-circle" data-ng-src="{{member.fields.teamMemberImage.fields.file.url}}" alt="{{member.fields.teamMemberImage.fields.description || member.fields.teamMemberImage.fields.title}}">
+              </div>
+              <h3><strong>{{member.fields.firstName}} {{member.fields.lastName}}</strong></h3>
+              <em>{{member.fields.teamMemberTitle}}</em>
             </div>
-          </div>
-</div>
-</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
