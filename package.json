@@ -88,8 +88,7 @@
     "start": "node server.js",
     "dev": "webpack --watch & nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss scss/*.scss www/main.css",
-    "postinstall": "bower cache clean && bower install"
+    "build-css": "node-sass --include-path scss scss/*.scss www/main.css"
   },
   "repository": {
     "type": "git",
