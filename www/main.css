@@ -2,6 +2,95 @@
   margin-bottom: -20px;
 }
 
+.card {
+  padding-top: 20px;
+  margin: 10px 20px 20px 20px;
+  background-color: #ffffff;
+  border: 1px solid #d8d8d8;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+.card.hovercard {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  padding-top: 0;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+}
+
+.card.hovercard img {
+  width: 300px;
+  height: 200px;
+}
+
+.card.hovercard .avatar {
+  position: relative;
+  top: -40px;
+  margin-bottom: -40px;
+}
+
+.card.hovercard .avatar img {
+  width: 10em;
+  height: 10em;
+  max-width: 10em;
+  max-height: 10em;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.card.hovercard .info {
+  padding: 4px 8px 10px;
+}
+
+.card.hovercard .info .title {
+  margin-bottom: 4px;
+  font-size: 24px;
+  line-height: 1;
+  color: #262626;
+  vertical-align: middle;
+}
+
+.card.hovercard .info .desc {
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 20px;
+  color: #737373;
+  text-overflow: ellipsis;
+}
+
+.card.hovercard .bottom {
+  padding: 0 20px;
+  margin-bottom: 17px;
+}
+
+.card.people .card-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  line-height: 29px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .home-page {
   background-image: url("/images/dock.jpeg");
   background-size: cover;
@@ -2561,6 +2650,28 @@ _::-webkit-:not(:root:root) {
     font-size: 14px !important; } }
 
 /* #footer { */
+.caret-up {
+    /* Safari */
+    -webkit-transform: rotate(-180deg);
+
+    /* Firefox */
+    -moz-transform: rotate(-180deg);
+
+    /* IE */
+    -ms-transform: rotate(-180deg);
+
+    /* Opera */
+    -o-transform: rotate(-180deg);
+
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=6);
+
+}
+
+.drop-up {
+    top: auto;
+    bottom: 100% !important;
+}
 .volbutton2 {
   margin-left: -15%;
   margin-bottom: 25%;
@@ -2588,6 +2699,12 @@ _::-webkit-:not(:root:root) {
 
 .floatRight {
   float: right; }
+
+.floatLeft {
+  float: left; }
+
+.center {
+  text-align: center; }
 
 .OM {
   letter-spacing: 2px;
