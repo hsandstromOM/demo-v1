@@ -36,6 +36,7 @@ angular.module('app', [
             $urlRouterProvider.otherwise('/*');
             $stateProvider
                 .state('site', require('./components/layout'))
+                .state('site.404', require('./components/templates/404/404-controller'))
                 .state('site.home', require('./components/templates/home/home-controller'))
                 .state('site.about', require('./components/templates/about/about-controller'))
                 .state('site.contact', require('./components/templates/contact/contact-controller'))

@@ -36,11 +36,6 @@ function HomeController($scope, $state, store, $window, contentful) {
 			}
 		}
 	});
-	// contentful.entries('content_type=servicesPage').then(function(res) {
-	// 	console.log(res);
-	// 	$scope.services = res.data.items[0];
-	// });
-
 	vm.allProducts = [];
 	vm.detailHref = 'product';
 
@@ -51,32 +46,4 @@ function HomeController($scope, $state, store, $window, contentful) {
 				vm.allProducts.push(entry)
 		});
 	});
-
-
-	// vm.allMembers = [];
-	//
-	// contentful.entries('content_type=teamMember').then(function(res) {
-	// 	console.log(res);
-	// 	var entries = res.data
-	// 	entries.items.forEach(function(entry) {
-	// 			vm.allMembers.push(entry)
-	// 	});
-	// });
-//
-// 	var angle = 0;
-// 	vm.galleryspin = function(sign) {
-// 	spinner = document.querySelector("#spinner");
-// 	if (!sign) { angle = angle + 45; } else { angle = angle - 45; }
-// 	spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
-// 	}
-// 	$("#AboutButton").click(function() {
-//     $('html,body').animate({
-//         scrollTop: $(".about-page").offset().top},
-//         'slow');
-// });
-//   $("#PortfolioButton").click(function() {
-//     $('html,body').animate({
-//         scrollTop: $(".portfolio").offset().top},
-//         'slow');
-// 			});
 }

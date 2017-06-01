@@ -60,12 +60,12 @@
 	        accessToken: '4ea268c4881b7dd9851ab42d784589b65ad86b5c60c82582972a57504b5f8e0d'
 	    });
 	    $urlRouterProvider.otherwise('/*');
-	    $stateProvider.state('site', __webpack_require__(164)).state('site.home', __webpack_require__(166)).state('site.about', __webpack_require__(168)).state('site.contact', __webpack_require__(170)).state('site.services', __webpack_require__(172)).state('site.board-list', __webpack_require__(174)).state('site.board-member', __webpack_require__(176));
+	    $stateProvider.state('site', __webpack_require__(164)).state('site.404', __webpack_require__(166)).state('site.home', __webpack_require__(168)).state('site.about', __webpack_require__(170)).state('site.contact', __webpack_require__(172)).state('site.services', __webpack_require__(174)).state('site.board-list', __webpack_require__(176)).state('site.board-member', __webpack_require__(178));
 	    $locationProvider.html5Mode({
 	        enabled: true,
 	        requireBase: false
 	    });
-	}]).directive('navFooter', __webpack_require__(178)).directive('navHeader', __webpack_require__(180));
+	}]).directive('navFooter', __webpack_require__(180)).directive('navHeader', __webpack_require__(182));
 
 /***/ }),
 /* 1 */
@@ -26570,11 +26570,6 @@
 			var stateName = newState.name.split('.');
 			$rootScope.currentPage = stateName.length > 1 ? stateName[1] : 'splash';
 		});
-	
-		// Get all the contentful entries on load
-		// contentful.entries('content_type=seo').then(function(res) {
-		//     console.log(res);
-		// });
 	}
 
 /***/ }),
@@ -26587,10 +26582,28 @@
 /* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
+	module.exports = {
+	  url: '/*',
+	  template: __webpack_require__(167),
+	  controller: component
+	};
+	
+	function component($scope) {}
+
+/***/ }),
+/* 167 */
+/***/ (function(module, exports) {
+
+	module.exports = "<div>\n  <div class=\"team\">\n    <div class=\"container fluid\">\n    <h1 class=\"center\">Oops...page does not exist.</h1>\n  </div>\n  </div>\n</div>\n"
+
+/***/ }),
+/* 168 */
+/***/ (function(module, exports, __webpack_require__) {
+
 	
 	HomeController.$inject = ["$scope", "$state", "store", "$window", "contentful"];module.exports = {
 		url: '/',
-		template: __webpack_require__(167),
+		template: __webpack_require__(169),
 		controller: HomeController,
 		controllerAs: 'homeCtrl'
 	};
@@ -26626,11 +26639,6 @@
 				}
 			}
 		});
-		// contentful.entries('content_type=servicesPage').then(function(res) {
-		// 	console.log(res);
-		// 	$scope.services = res.data.items[0];
-		// });
-	
 		vm.allProducts = [];
 		vm.detailHref = 'product';
 	
@@ -26641,48 +26649,21 @@
 				vm.allProducts.push(entry);
 			});
 		});
-	
-		// vm.allMembers = [];
-		//
-		// contentful.entries('content_type=teamMember').then(function(res) {
-		// 	console.log(res);
-		// 	var entries = res.data
-		// 	entries.items.forEach(function(entry) {
-		// 			vm.allMembers.push(entry)
-		// 	});
-		// });
-		//
-		// 	var angle = 0;
-		// 	vm.galleryspin = function(sign) {
-		// 	spinner = document.querySelector("#spinner");
-		// 	if (!sign) { angle = angle + 45; } else { angle = angle - 45; }
-		// 	spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
-		// 	}
-		// 	$("#AboutButton").click(function() {
-		//     $('html,body').animate({
-		//         scrollTop: $(".about-page").offset().top},
-		//         'slow');
-		// });
-		//   $("#PortfolioButton").click(function() {
-		//     $('html,body').animate({
-		//         scrollTop: $(".portfolio").offset().top},
-		//         'slow');
-		// 			});
 	}
 
 /***/ }),
-/* 167 */
+/* 169 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div id=\"homePage\">\n  <div></div>\n  <div class=\"home-page jumbotron\">\n    <div class=\"fluid-container\">\n      <h1>{{home.fields.bannerHeadline}}</h1>\n      <p class=\"para\">{{home.fields.bannerSubHeadline}}</p>\n      <hr>\n      <div class=\"social center-block\">\n        <ul>\n          <li><a ng-href=\"{{footer.fields.facebookUrl}}\" target=\"_blank\">\n                <i class=\"fa fa-2x fa-facebook\"></i>\n            </a></li>\n          <li><a href=\"{{footer.fields.twitterUrl}}\" target=\"_blank\">\n                <i class=\"fa fa-2x fa-twitter\"></i>\n            </a></li>\n          <li><a href=\"{{footer.fields.youTubeUrl}}\" target=\"_blank\">\n                <i class=\"fa fa-2x fa-youtube\"></i>\n            </a></li>\n          <li><a href=\"{{footer.fields.instagramUrl}}\" target=\"_blank\">\n                <i class=\"fa fa-2x fa-instagram\"></i>\n            </a></li>\n        </ul>\n      </div>\n    </div>\n  </div>\n  <div class=\"container\">\n    <div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\n      <!-- Indicators -->\n      <ol class=\"carousel-indicators\">\n        <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>\n        <li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>\n        <li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>\n      </ol>\n\n      <!-- Wrapper for slides -->\n      <div class=\"carousel-inner\" role=\"listbox\">\n        <div class=\"item active\">\n          <img data-ng-src=\"{{home.fields.sliderImage1.fields.file.url}}\" alt=\"{{home.fields.sliderImage1.fields.description}}\">\n          <div class=\"carousel-caption\">\n            <h3>{{home.fields.sliderImage1Copy}}</h3>\n          </div>\n        </div>\n\n        <div class=\"item\">\n          <img data-ng-src=\"{{home.fields.sliderImage2.fields.file.url}}\" alt=\"{{home.fields.sliderImage2.fields.description}}\">\n          <div class=\"carousel-caption\">\n            <h3>{{home.fields.sliderImage2Copy}}</h3>\n          </div>\n        </div>\n\n        <div class=\"item\">\n          <img data-ng-src=\"{{home.fields.sliderImage3.fields.file.url}}\" alt=\"{{home.fields.sliderImage3.fields.description}}\">\n          <div class=\"carousel-caption\">\n            <h3>{{home.fields.sliderImage3Copy}}</h3>\n          </div>\n        </div>\n      </div>\n\n      <!-- Left and right controls -->\n      <a class=\"left carousel-control\" href=\"#myCarousel\" role=\"button\" data-slide=\"prev\">\n        <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Previous</span>\n      </a>\n      <a class=\"right carousel-control\" href=\"#myCarousel\" role=\"button\" data-slide=\"next\">\n        <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Next</span>\n      </a>\n    </div>\n  </div>\n  </br>\n  <style>\n  .column {\n  float: left;\n  overflow: auto;\n  padding: 20px;\n  width: 50%;\n}\n\nh1  {\n  text-transform: uppercase;\n  font: bold 45px/1.5 Helvetica, Verdana, sans-serif;\n}\n\np {\n  margin-bottom: 20px;\n  color: #888;\n  font: 14px/1.5 Helvetica, Verdana, sans-serif;\n}\n\n@media all and (max-width: 767px) {\n  p {\n    font-size: 12px;\n  }\n\n  h1 {\n    font-size: 35px;\n  }\n}\n\n@media all and (max-width: 550px) {\n  h1 {\n    font-size: 23px;\n  }\n  </style>\n  <div class=\"column\">\n    <h1>Focal Point</h1>\n    <div class=\"focal-point right-3 up-3\">\n      <div><img src=\"/images/dock.jpeg\" alt=\"\"></div>\n    </div>\n  </div>\n\n  <div class=\"column\">\n    <h1>Focal Point</h1>\n    <div class=\"focal-point right-2 up-2\">\n      <div><img src=\"/images/dock.jpeg\" alt=\"\"></div>\n    </div>\n  </div>\n<!-- <div class=\"container\">\n    <div class=\"row\">\n          <div class=\"col-md-3\" data-ng-repeat=\"product in homeCtrl.allProducts\" style=\"text-align:center;\">\n            <div>\n              <div>\n                <img class=\"img-circle\" data-ng-src=\"{{product.fields.dataItemImage.fields.file.url}}\" alt=\"{{product.fields.dataItemImage.fields.description || product.fields.dataItemImage.fields.title}}\">\n              </div>\n              <h3><strong>{{product.fields.dataItemName}} ${{product.fields.dataItemPrice}}</strong></h3>\n              <button\n                    class=\"snipcart-add-item\"\n                    data-ng-repeat=\"product in homeCtrl.allProducts\"\n                    data-item-id=\"{{product.fields.dataItemId}}\"\n                    data-item-name=\"{{product.fields.dataItemName}}\"\n                    data-item-price=\"{{product.fields.dataItemPrice}}\"\n                    data-item-url=\"http://hoseasandstrom.com/\"\n                    data-item-description=\"Some fresh bacon\">\n                        Buy bacon\n                </button>\n            </div>\n          </div>\n      </div>\n    </div> -->\n"
 
 /***/ }),
-/* 168 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = {
 		url: '/about',
-		template: __webpack_require__(169),
+		template: __webpack_require__(171),
 		controller: AboutController,
 		controllerAs: 'aboutCtrl'
 	};
@@ -26709,18 +26690,18 @@
 	}
 
 /***/ }),
-/* 169 */
+/* 171 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div id=\"aboutPage\">\n  <div class=\"team\">\n    <div>\n    <img class=\"desktopImageSizing\" data-ng-src=\"{{aboutCtrl.contentfulData.fields.fullSizeImage.fields.file.url}}\" alt=\"{{aboutCtrl.contentfulData.fields.fullSizeImage.fields.description || aboutCtrl.contentfulData.fields.hero[0].fields.title}}\">\n    <img class=\"mobile-hero-image\" data-ng-src=\"{{aboutCtrl.contentfulData.fields.thumbnail.fields.file.url}}\" alt=\"{{aboutCtrl.contentfulData.fields.thumbnail.fields.description}}\">\n  </div>\n    <div class=\"container aboutContent\">\n      <div class=\"row\">\n        <div class=\"col-md-8 col-sm-8\">\n          <p id=\"bodyHeader\" data-marked=\"aboutCtrl.contentfulData.fields.title\"></p>\n          <p id=\"parentAboutUsP\" data-marked=\"aboutCtrl.contentfulData.fields.body\"></p>\n        </div>\n        <div class=\"col-md-1\"></div>\n        <div class=\"col-md-4 sidebarVolunteer\">\n          <div class=\"center-text\">\n            <p class=\"subtitle fancy tk-futura-pt\">\n              <span>{{aboutCtrl.contentfulData.fields.sidebarHeader}}</span>\n            </p>\n            <p class=\"sidebar-mission\">{{aboutCtrl.contentfulData.fields.sidebarBlock}}</p>\n            <volunteerbtn></volunteerbtn>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
-/* 170 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = {
 		url: '/contact',
-		template: __webpack_require__(171),
+		template: __webpack_require__(173),
 		controller: ContactController,
 		controllerAs: 'contactCtrl'
 	};
@@ -26825,18 +26806,18 @@
 	}
 
 /***/ }),
-/* 171 */
+/* 173 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div id=\"contactPage\">\n  <div class=\"team\">\n  <h2><strong>Contact Us</strong></h2>\n\n  <br/>\n    <form class=\"contact-form\">\n       <div class=\"container\">\n         <div class=\"row\">\n           <div class=\"col-sm-4\" style=\"padding-left: 0;\">\n             <input type=\"name\" class=\"form-control\" placeholder=\"Name (required)\">\n           </div>\n           <div class=\"col-sm-4\">\n             <input type=\"email\" class=\"form-control\" placeholder=\"E-Mail (required)\">\n           </div>\n           <div class=\"col-sm-4\" style=\"padding-right: 2em;\">\n             <input type=\"subject\" class=\"form-control\" placeholder=\"Subject (optional)\">\n           </div>\n         </div>\n         <br/>\n         <div class=\"row\">\n           <div class=\"message\" style=\"padding-right: 2em;\"><textarea rows=\"3\" style=\"max-height:8em;\"class=\"form-control\" id=\"message\" placeholder=\"Message (required)\"></textarea></div>\n         </div>\n       </div>\n       <br/>\n        <div class=\"btn btn-default pull-right\">Send Message</div>\n       </form>\n          <div class=\"emailConfirmationLayer\" data-ng-show=\"contactCtrl.showConfirmationLayer\">\n            <h2 class=\"tk-clarendon-wide\">SUCCESS!</h2>\n            <p class=\"futuraHeavy text-uppercase\">Thanks for your interest!</p>\n            <p>Return to our\n              <a href=\"/\">homepage.</a>\n            </p>\n          </div>\n          <div class=\"emailConfirmationLayer\" data-ng-show=\"contactCtrl.showErrorLayer\">\n            <h2 class=\"tk-clarendon-wide\">WE'RE SORRY!</h2>\n            <p class=\"futuraHeavy text-uppercase\">An error occurred while trying to deliver your message through the website.</p>\n            <p>Return to our\n              <a href=\"/\">homepage.</a>\n            </p>\n          </div>\n          <section>\n          <div id='map'></div>\n        </section>\n      </div>\n</div>\n<br/>\n<br/>\n<br/>\n"
 
 /***/ }),
-/* 172 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = {
 		url: '/services',
-		template: __webpack_require__(173),
+		template: __webpack_require__(175),
 		controller: ServicesController,
 		controllerAs: 'servicesCtrl'
 	};
@@ -26877,18 +26858,18 @@
 	}
 
 /***/ }),
-/* 173 */
+/* 175 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div id=\"servicesPage\">\n  <div class=\"team\">\n    <div class=\"container\">\n      <h2 class=\"section-title\"><strong>Our Services</strong></h2>\n      <div class=\"row\">\n        <div class=\"col-md-4\">\n          <div class=\"service\">\n            <span class=\"glyphicon glyphicon-cloud\" aria-hidden=\"true\"></span>\n            <h3><strong>{{services.fields.service1Title}}</strong></h3>\n            <p>{{services.fields.service1Copy}}</p>\n          </div>\n        </div>\n        <div class=\"col-md-4\">\n          <div class=\"service\">\n            <span class=\"glyphicon glyphicon-user\" aria-hidden=\"true\"></span>\n            <h3><strong>{{services.fields.service2Title}}</strong></h3>\n            <p>{{services.fields.service2Copy}}</p>\n          </div>\n        </div>\n        <div class=\"col-md-4\">\n          <div class=\"service\">\n            <span class=\"glyphicon glyphicon-globe\" aria-hidden=\"true\"></span>\n            <h3><strong>{{services.fields.service3Title}}</strong></h3>\n            <p>{{services.fields.service3Copy}}</p>\n          </div>\n        </div>\n      </div>\n      <br/>\n      <hr/>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
-/* 174 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = {
 	    url: '/team',
-	    template: __webpack_require__(175),
+	    template: __webpack_require__(177),
 	    controller: BoardListController,
 	    controllerAs: 'listCtrl'
 	};
@@ -26980,18 +26961,18 @@
 	}
 
 /***/ }),
-/* 175 */
+/* 177 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div id=\"listView\">\n  <div class=\"team\">\n    <div class=\"desktopImageSizing\">\n    <div class=\"container fluid\">\n      <h1 class=\"section-title\"><strong>Our Team Desktop</strong></h1>\n      <div class=\"card hovercard\" data-ng-repeat=\"member in listCtrl.allMembers | orderBy: 'fields.priority'\" data-ng-href=\"/{{listCtrl.detailHref}}/{{member.fields.slug}}\">\n        <img src=\"http://placehold.it/300x200/000000/&text=Header\" alt=\"\" />\n        <div class=\"avatar\">\n          <img data-ng-src=\"{{member.fields.teamMemberImage.fields.file.url}}\" alt=\"{{member.fields.teamMemberImage.fields.description || member.fields.teamMemberImage.fields.title}}\" />\n        </div>\n        <div class=\"info\">\n          <div class=\"title\">\n            {{member.fields.teamMemberTitle}}\n          </div>\n          <div class=\"desc\">{{member.fields.firstName}}</div>\n          <div class=\"desc\">{{member.fields.lastName}}</div>\n        </div>\n        <div class=\"bottom\">\n          <button class=\"btn btn-default\">Contact</button>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"mobile-hero-image\"\n    <div class=\"container fluid\">\n      <h2 class=\"section-title\"><strong>Our Team Mobile</strong></h2>\n      <div class=\"container\">\n        <div class=\"row\">\n          <a data-ng-repeat=\"member in listCtrl.allMembers | orderBy: 'fields.priority'\" data-ng-href=\"/{{listCtrl.detailHref}}/{{member.fields.slug}}\" style=\"text-align:center; padding-bottom:10px;\">\n            <div style=\"padding-bottom:20px\">\n              <div>\n                <img class=\"img-circle\" style=\"max-width:70%;\" data-ng-src=\"{{member.fields.teamMemberImage.fields.file.url}}\" alt=\"{{member.fields.teamMemberImage.fields.description || member.fields.teamMemberImage.fields.title}}\">\n              </div>\n              <h4>{{member.fields.firstName}} {{member.fields.lastName}}</h4>\n              <em>{{member.fields.teamMemberTitle}}</em>\n            </div>\n          </a>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
-/* 176 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = {
 	    url: '/team-member/:slug',
-	    template: __webpack_require__(177),
+	    template: __webpack_require__(179),
 	    controller: TeamMemberController,
 	    controllerAs: 'memberCtrl'
 	};
@@ -27038,38 +27019,10 @@
 	}
 
 /***/ }),
-/* 177 */
-/***/ (function(module, exports) {
-
-	module.exports = "<div id=\"memberView\">\n  <div class=\"team\">\n    <div class=\"topBanner\">\n      <a class=\"button tk-clarendon-wide\" href=\"{{memberCtrl.parentPage.href}}\">&nbsp< BACK TO\n    {{memberCtrl.parentPage.text}}</a>\n    </div>\n    <div class=\"clearfix\"></div>\n    <div class=\"col-md-6\">\n      <div class=\"eventBlock col-md-12\">\n        <img data-ng-src=\"{{memberCtrl.currentMember.fields.teamMemberImage.fields.file.url}}\" alt=\"{{memberCtrl.currentMember.fields.teamMemberImage.fields.description || memberCtrl.currentMember.teamMemberImage.fields.title}}\">\n      </div>\n    </div>\n    <div class=\"col-md-6 memberInfo\">\n      <h6 class=\"tk-futura-pt memberName\">{{memberCtrl.currentMember.fields.firstName}}{{memberCtrl.currentMember.fields.lastName}}</h6>\n      <h6 class=\"tk-futura-pt memberTitle\" data-ng-if=\"memberCtrl.currentMember.fields.teamMemberTitle\">{{memberCtrl.currentMember.fields.teamMemberTitle}}</h6>\n      <div class=\"memberBody\">\n        <div class=\"tk-futura-pt\" id=\"newsbody\" data-marked=\"memberCtrl.currentMember.fields.teamMemberCopy\"></div>\n      </div>\n    </div>\n    <div class=\"col-md-12 memberGallery\">\n      <a class=\"galleryImages col-md-4\" data-ng-repeat=\"member in memberCtrl.allMembers | orderBy: 'fields.priority'\" data-ng-href=\"/{{memberCtrl.detailHref}}/{{member.fields.slug}}\" alt=\"{{teamMember.fields.teamMemberImage.fields.description || teamMember.fields.teamMemberImage.title}}\">\n    <img ng-src=\"{{member.fields.teamMemberImage.fields.file.url || member.fields.teamMemberImage.fields.file.url}}\" alt=\"\" class=\"unselectedMembers\">\n    <p class=\"tk-futura-pt\">{{member.fields.firstName}}{{member.fields.lastName}}</p>\n    <p class=\"tk-futura-pt\" data-ng-if=\"member.fields.teamMemberTitle\">{{member.fields.teamMemberTitle}}</p>\n  </a>\n    </div>\n  </div>\n</div>\n"
-
-/***/ }),
-/* 178 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	module.exports = function () {
-	    return {
-	        restrict: 'EA',
-	        replace: true,
-	        template: __webpack_require__(179),
-	        controller: controller
-	    };
-	};
-	
-	function controller($scope, $state, store, $window, contentful) {
-	    var vm = this;
-	
-	    contentful.entries('content_type=footer').then(function (res) {
-	        console.log(res);
-	        $scope.footer = res.data.items[0];
-	    });
-	}
-
-/***/ }),
 /* 179 */
 /***/ (function(module, exports) {
 
-	module.exports = "<footer class=\"footer\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div>\n        <div>\n          <h4>{{footer.fields.title}}</h4>\n        </div>\n        <div>\n          <h5>{{footer.fields.footerBody}}</h5>\n        </div>\n      </div>\n      <div class=\"container\">\n        <p class=\"text-muted credit\">\n          <div class=\"btn-group\">\n            <button type=\"button\" class=\"btn btn-default dropdown-toggle\" data-toggle=\"dropdown\">\n                    Links <span class=\"caret-up\"></span>\n                </button>\n            <ul class=\"dropdown-menu drop-up\" role=\"menu\">\n              <li><a href=\"/about\">About</a></li>\n              <li><a href=\"/team\">Team</a></li>\n              <li><a href=\"/services\">Services</a></li>\n              <li><a href=\"/testimonials\">Testimonials</a></li>\n              <li><a href=\"/faq\">FAQ</a>\n                <li><a href=\"/contact\">Contact Us</a></li>\n                <li class=\"divider\"></li>\n                <li><a href=\"/\">Home</a></li>\n            </ul>\n          </div>\n        </p>\n        <div>\n          <a ng-href=\"{{footer.fields.facebookUrl}}\" target=\"_blank\">\n                <i class=\"fa fa-facebook\"></i>\n            </a>\n          <a href=\"{{footer.fields.twitterUrl}}\" target=\"_blank\">\n                <i class=\"fa fa-twitter\"></i>\n            </a>\n          <a href=\"{{footer.fields.youtubeUrl}}\" target=\"_blank\">\n                <i class=\"fa fa-youtube\"></i>\n            </a>\n          <a href=\"{{footer.fields.instagramUrl}}\" target=\"_blank\">\n                <i class=\"fa fa-instagram\"></i>\n            </a>\n        </div>\n      </div>\n      <!-- <form name=\"MailchimpSubscriptionForm\" data-ng-controller=\"MailchimpSubscriptionCtrl\" class=\"ng-pristine ng-valid ng-scope ng-valid-email\">\n                    <div data-ng-hide=\"mailchimp.result === 'sucess'\">\n                        <input class=\"hidden ng-pristine ng-untouched ng-valid ng-not-empty\" type=\"hidden\" data-ng-model=\"mailchimp.username\" data-ng-init=\"mailchimp.username='USERNAME'\">\n                        <input class=\"hidden ng-pristine ng-untouched ng-valid ng-not-empty\" type=\"hidden\" data-ng-model=\"mailchimp.dc\" data-ng-init=\"mailchimp.dc='us1'\">\n                        <input class=\"hidden ng-pristine ng-untouched ng-valid ng-not-empty\" type=\"hidden\" data-ng-model=\"mailchimp.u\" data-ng-init=\"mailchimp.u='USER NUMBER'\">\n                        <input class=\"hidden ng-pristine ng-untouched ng-valid ng-not-empty\" type=\"hidden\" data-ng-model=\"mailchimp.id\" data-ng-init=\"mailchimp.id='USER ID'\">\n                        <input\n                        class=\"emailFormInput tk-futura-pt col-md-6 ng-pristine ng-untouched ng-valid ng-empty ng-valid-email\"\n                        type=\"email\"\n                        placeholder=\"EMAIL ADDRESS\"\n                        data-ng-model=\"mailchimp.EMAIL\"\n                        data-ng-init=\"mailchimp.dc='us1'\">\n                        <button\n                            data-ng-click=\"addSubscription(mailchimp)\" id=\"sign-me-up-button\">Sign Me Up</button>\n                    </div>\n                    <div data-ng-show=\"mailchimp.result === 'success'\" class=\"ng-hide\">\n                        <span data-ng-bind-html=\"mailchimp.successMessage\" class=\"ng-binding mail-chimp-result-message\"></span>\n                    </div>\n                    <div data-ng-show=\"mailchimp.result === 'error'\" class=\"ng-hide\">\n                        <span data-ng-bind-html=\"mailchimp.errorMessage\" class=\"ng-binding mail-chimp-result-message\"></span>\n                    </div>\n                </form> -->\n      <div>\n        <a href=\"http://www.obviouslee.com\" target=\"_blank\">\n                    SITE BY <span>OBVIOUSLEE MARKETING</span>\n                </a>\n      </div>\n    </div>\n  </div>\n</footer>\n"
+	module.exports = "<div id=\"memberView\">\n  <div class=\"team\">\n    <div class=\"topBanner\">\n      <a class=\"button tk-clarendon-wide\" href=\"{{memberCtrl.parentPage.href}}\">&nbsp< BACK TO\n    {{memberCtrl.parentPage.text}}</a>\n    </div>\n    <div class=\"clearfix\"></div>\n    <div class=\"col-md-6\">\n      <div class=\"eventBlock col-md-12\">\n        <img data-ng-src=\"{{memberCtrl.currentMember.fields.teamMemberImage.fields.file.url}}\" alt=\"{{memberCtrl.currentMember.fields.teamMemberImage.fields.description || memberCtrl.currentMember.teamMemberImage.fields.title}}\">\n      </div>\n    </div>\n    <div class=\"col-md-6 memberInfo\">\n      <h6 class=\"tk-futura-pt memberName\">{{memberCtrl.currentMember.fields.firstName}}{{memberCtrl.currentMember.fields.lastName}}</h6>\n      <h6 class=\"tk-futura-pt memberTitle\" data-ng-if=\"memberCtrl.currentMember.fields.teamMemberTitle\">{{memberCtrl.currentMember.fields.teamMemberTitle}}</h6>\n      <div class=\"memberBody\">\n        <div class=\"tk-futura-pt\" id=\"newsbody\" data-marked=\"memberCtrl.currentMember.fields.teamMemberCopy\"></div>\n      </div>\n    </div>\n    <div class=\"col-md-12 memberGallery\">\n      <a class=\"galleryImages col-md-4\" data-ng-repeat=\"member in memberCtrl.allMembers | orderBy: 'fields.priority'\" data-ng-href=\"/{{memberCtrl.detailHref}}/{{member.fields.slug}}\" alt=\"{{teamMember.fields.teamMemberImage.fields.description || teamMember.fields.teamMemberImage.title}}\">\n    <img ng-src=\"{{member.fields.teamMemberImage.fields.file.url || member.fields.teamMemberImage.fields.file.url}}\" alt=\"\" class=\"unselectedMembers\">\n    <p class=\"tk-futura-pt\">{{member.fields.firstName}}{{member.fields.lastName}}</p>\n    <p class=\"tk-futura-pt\" data-ng-if=\"member.fields.teamMemberTitle\">{{member.fields.teamMemberTitle}}</p>\n  </a>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 /* 180 */
@@ -27084,6 +27037,34 @@
 	    };
 	};
 	
+	function controller($scope, $state, store, $window, contentful) {
+	    var vm = this;
+	
+	    contentful.entries('content_type=footer').then(function (res) {
+	        console.log(res);
+	        $scope.footer = res.data.items[0];
+	    });
+	}
+
+/***/ }),
+/* 181 */
+/***/ (function(module, exports) {
+
+	module.exports = "<footer class=\"footer\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div>\n        <div>\n          <h4>{{footer.fields.title}}</h4>\n        </div>\n        <div>\n          <h5>{{footer.fields.footerBody}}</h5>\n        </div>\n      </div>\n      <div class=\"container\">\n        <p class=\"text-muted credit\">\n          <div class=\"btn-group\">\n            <button type=\"button\" class=\"btn btn-default dropdown-toggle\" data-toggle=\"dropdown\">\n                    Links <span class=\"caret-up\"></span>\n                </button>\n            <ul class=\"dropdown-menu drop-up\" role=\"menu\">\n              <li><a href=\"/about\">About</a></li>\n              <li><a href=\"/team\">Team</a></li>\n              <li><a href=\"/services\">Services</a></li>\n              <li><a href=\"/testimonials\">Testimonials</a></li>\n              <li><a href=\"/faq\">FAQ</a>\n                <li><a href=\"/contact\">Contact Us</a></li>\n                <li class=\"divider\"></li>\n                <li><a href=\"/\">Home</a></li>\n            </ul>\n          </div>\n        </p>\n        <div>\n          <a ng-href=\"{{footer.fields.facebookUrl}}\" target=\"_blank\">\n                <i class=\"fa fa-facebook\"></i>\n            </a>\n          <a href=\"{{footer.fields.twitterUrl}}\" target=\"_blank\">\n                <i class=\"fa fa-twitter\"></i>\n            </a>\n          <a href=\"{{footer.fields.youtubeUrl}}\" target=\"_blank\">\n                <i class=\"fa fa-youtube\"></i>\n            </a>\n          <a href=\"{{footer.fields.instagramUrl}}\" target=\"_blank\">\n                <i class=\"fa fa-instagram\"></i>\n            </a>\n        </div>\n      </div>\n      <!-- <form name=\"MailchimpSubscriptionForm\" data-ng-controller=\"MailchimpSubscriptionCtrl\" class=\"ng-pristine ng-valid ng-scope ng-valid-email\">\n                    <div data-ng-hide=\"mailchimp.result === 'sucess'\">\n                        <input class=\"hidden ng-pristine ng-untouched ng-valid ng-not-empty\" type=\"hidden\" data-ng-model=\"mailchimp.username\" data-ng-init=\"mailchimp.username='USERNAME'\">\n                        <input class=\"hidden ng-pristine ng-untouched ng-valid ng-not-empty\" type=\"hidden\" data-ng-model=\"mailchimp.dc\" data-ng-init=\"mailchimp.dc='us1'\">\n                        <input class=\"hidden ng-pristine ng-untouched ng-valid ng-not-empty\" type=\"hidden\" data-ng-model=\"mailchimp.u\" data-ng-init=\"mailchimp.u='USER NUMBER'\">\n                        <input class=\"hidden ng-pristine ng-untouched ng-valid ng-not-empty\" type=\"hidden\" data-ng-model=\"mailchimp.id\" data-ng-init=\"mailchimp.id='USER ID'\">\n                        <input\n                        class=\"emailFormInput tk-futura-pt col-md-6 ng-pristine ng-untouched ng-valid ng-empty ng-valid-email\"\n                        type=\"email\"\n                        placeholder=\"EMAIL ADDRESS\"\n                        data-ng-model=\"mailchimp.EMAIL\"\n                        data-ng-init=\"mailchimp.dc='us1'\">\n                        <button\n                            data-ng-click=\"addSubscription(mailchimp)\" id=\"sign-me-up-button\">Sign Me Up</button>\n                    </div>\n                    <div data-ng-show=\"mailchimp.result === 'success'\" class=\"ng-hide\">\n                        <span data-ng-bind-html=\"mailchimp.successMessage\" class=\"ng-binding mail-chimp-result-message\"></span>\n                    </div>\n                    <div data-ng-show=\"mailchimp.result === 'error'\" class=\"ng-hide\">\n                        <span data-ng-bind-html=\"mailchimp.errorMessage\" class=\"ng-binding mail-chimp-result-message\"></span>\n                    </div>\n                </form> -->\n      <div>\n        <a href=\"http://www.obviouslee.com\" target=\"_blank\">\n                    SITE BY <span>OBVIOUSLEE MARKETING</span>\n                </a>\n      </div>\n    </div>\n  </div>\n</footer>\n"
+
+/***/ }),
+/* 182 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = function () {
+	    return {
+	        restrict: 'EA',
+	        replace: true,
+	        template: __webpack_require__(183),
+	        controller: controller
+	    };
+	};
+	
 	function controller($scope) {
 	    $scope.toggleDropdown = {
 	        show: false
@@ -27091,7 +27072,7 @@
 	}
 
 /***/ }),
-/* 181 */
+/* 183 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div id=\"header\">\n    <div class=\"navbar navbar-default navbar-fixed-top role=\" navigation \"\">\n      <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n          <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          <a class=\"navbar-brand navbar-header\" href=\"/\">Home\n           </a>\n        </div>\n        <div class=\"navbar-collapse collapse\">\n          <ul class=\"nav navbar-nav navbar-right nav-bar-options\">\n            <li><a id=\"aboutButton\"href=\"/about\" data-ui-sref-active=\"activeUnderline\">About</a></li>\n            <li><a id=\"teamButton\" href=\"/team\" data-ui-sref-active=\"activeUnderline\">Team</a></li>\n            <li><a id=\"servicesButton\" href=\"/services\" data-ui-sref-active=\"activeUnderline\">Services</a></li>\n            <li><a id=\"testimonialsButton\" href=\"/testamonials\" data-ui-sref-active=\"activeUnderline\">Testimonials</a></li>\n            <!-- <li><a id=\"participantsButton\" href=\"/participants\" data-ui-sref-active=\"activeUnderline\">Participants</a></li> -->\n            <!-- <li><a id=\"partnersButton\" href=\"/partners\" data-ui-sref-active=\"activeUnderline\">Partners</a></li> -->\n            <li><a id=\"faqButton\" href=\"/faq\" data-ui-sref-active=\"activeUnderline\">FAQ</a></li>\n            <li><a id=\"contactButton\" href=\"/contact\" data-ui-sref-active=\"activeUnderline\">Contact Us</a></li>\n          </ul>\n        </div>\n        <!-- </div> -->\n      </div>\n    </div>\n</div>\n"

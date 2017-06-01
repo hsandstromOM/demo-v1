@@ -14,9 +14,4 @@ function SiteController($scope, $rootScope, $state, contentful) {
 		var stateName = newState.name.split('.');
 		$rootScope.currentPage = stateName.length > 1 ? stateName[1] : 'splash';
 	});
-
-	// Get all the contentful entries on load
-	// contentful.entries('content_type=seo').then(function(res) {
-	//     console.log(res);
-	// });
 }
