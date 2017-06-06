@@ -15,12 +15,12 @@ router.post('/email', function(req, res) {
 	let transporter = nodemailer.createTransport(mg(auth));
 
 	let email = {
-		from: 'contactForm@charlestonparksconservancy.com',
+		from: 'contact@example.com',
 		to: req.body.toEmail,
 		'h:Reply-To': req.body.fromEmail,
 		subject: req.body.subject,
 		text: req.body.emailBody,
-		html: `<p>This email was sent to you through the Charleston Parks Conservancy website by:</p><p><b>Name: </b>${req.body.fromName}<br><b>Company: </b>${req.body.fromCompany}<br><b>Email: </b>${req.body.fromEmail}</p><h3>${req.body.emailBody}</h3>`,
+		html: `<p>This email was sent to you through the Example website by:</p><p><b>Name: </b>${req.body.fromName}<br><b>Company: </b>${req.body.fromCompany}<br><b>Email: </b>${req.body.fromEmail}</p><h3>${req.body.emailBody}</h3>`,
 	};
 
 	console.log('email is  \n', email);

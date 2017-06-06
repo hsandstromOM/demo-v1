@@ -1,6 +1,6 @@
 
 // Load in configs (only necessary for dev)
-require('dotenv').config();
+// require('dotenv').config();
 
 const express = require('express');
 const sendHtml = require('send-data/html');
@@ -21,11 +21,42 @@ const app = express();
 const router = new express.Router();
 const mg = require('nodemailer-mailgun-transport');
 const nodemailer = require ('nodemailer');
+const mandrillTransport = require('nodemailer-mandrill-transport');
+const jsonParser = bodyParser.json()
 
-const MapboxClient = require('mapbox');
+const obj = mandrillTransport({
+  auth: {
+    apiKey: '0SZWw1_FBFk7Cv_7h9W14A'
+  }
+});
 
-const client = new MapboxClient('pk.eyJ1IjoiaG9zZWEtc2FuZHN0cm9tIiwiYSI6ImNqM2J3eW91aTAwNDEyd3BmeWJ0eXV5ODUifQ.dVR5zV-pArYiQKYWVqvS7Q');
+var smtpTransport = nodemailer.createTransport(obj);
 
+app.post('/api/send', jsonParser, function(req, res){
+  var text = req.body;
+  console.log("something");
+  var mailOptions = {
+    // to: req.query.to,
+    // subject: req.query.subject,
+    // text: req.query.text
+
+    from: 'do-not-reply@citibot.com',
+    to: "info@citibot.io",
+    subject: 'Citibot Newsletter Signup',
+    text: '\n\nEmail: ' + text.email
+
+  };
+
+  smtpTransport.sendMail(mailOptions, function(error, response){
+    if(error){
+      console.log(error);
+      res.end("error");
+    }else{
+     console.log("Message sent: " + response.message);
+      res.end("sent");
+    }
+  });
+});
 
 // Set the port
 app.set('port', process.env.PORT || 5000);
@@ -42,11 +73,6 @@ app.use(compression(`${__dirname}/www`));
 app.use(cors());
 app.use(prerender).set('prerenderServiceUrl', 'https://demo-v1-om.herokuapp.com/').set('prerenderToken', process.env.PRERENDER_TOKEN);
 app.use(bodyParser.json());       // to support JSON-encoded bodies
-
-client.geocodeForward('Chester, NJ', function(err, data, res) {
-  // data is the geocoding result as parsed JSON
-  // res is the http response, including: status, headers and entity properties
-});
 
 const forceSsl = function(req, res, next) {
 	if (req.headers['x-forwarded-proto'] !== 'https') {
@@ -84,6 +110,7 @@ app.use(router);
 // Load in routes
 app.use('/api', apiRoutes);
 app.use(redirectRoutes);
+
 
 // NOTE: SHOULD ALWAYS BE LAST LINE OF FILE
 app.get('*', handleAppPage);

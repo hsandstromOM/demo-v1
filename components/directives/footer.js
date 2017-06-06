@@ -10,10 +10,10 @@ module.exports = function() {
 function controller($scope, $state, store, $window, contentful) {
   var vm = this;
 
-  contentful.entries('content_type=footer').then(function(res) {
-		console.log(res);
-		$scope.footer = res.data.items[0];
-	});
+  // contentful.entries('content_type=footer').then(function(res) {
+	// 	console.log(res);
+	// 	$scope.footer = res.data.items[0];
+	// });
 
 
 

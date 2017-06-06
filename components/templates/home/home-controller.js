@@ -9,6 +9,15 @@ module.exports = {
 function HomeController($scope, $state, store, $window, contentful) {
 	var vm = this;
   $window.scrollTo(0, 0);
+	vm.trustUrl = "trustUrl";
+
+	trustUrl.$inject = ['$sce'];
+
+	function trustUrl($sce) {
+			return function (mediaUrl) {
+				return $sce.trustAsResourceUrl(mediaUrl);
+			};
+		}
 
 	contentful.entries('content_type=homePage').then(function(res) {
 		console.log(res);
@@ -35,15 +44,5 @@ function HomeController($scope, $state, store, $window, contentful) {
 				}
 			}
 		}
-	});
-	vm.allProducts = [];
-	vm.detailHref = 'product';
-
-	contentful.entries('content_type=products').then(function(res) {
-		console.log(res);
-		var entries = res.data
-		entries.items.forEach(function(entry) {
-				vm.allProducts.push(entry)
-		});
 	});
 }

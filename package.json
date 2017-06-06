@@ -89,6 +89,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "webpack --watch & nodemon server.js",
+    "prod": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/*.scss www/main.css"
   },
