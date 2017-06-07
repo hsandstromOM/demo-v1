@@ -11,14 +11,6 @@ function ContactController(contentful, $window, $state, $http, $timeout, $scope)
 	vm.showConfirmationLayer = false;
 	vm.showErrorLayer = false;
 
-	mapboxgl.accessToken = 'pk.eyJ1IjoiaG9zZWEtc2FuZHN0cm9tIiwiYSI6ImNqM2J3eW91aTAwNDEyd3BmeWJ0eXV5ODUifQ.dVR5zV-pArYiQKYWVqvS7Q';
-	const map = new mapboxgl.Map({
-    container: 'map', // container id
-    style: 'mapbox://styles/mapbox/streets-v9', //stylesheet location
-    center: [-79.9434814, 32.796544], // starting position
-    zoom: 9 // starting zoom
-});
-
 	contentful.entries('content_type=contactPage&include=3').then(function(res) {
 		vm.sideBarData = res.data.items[0];
 		vm.contactFormSubjects = vm.sideBarData.fields.contactFormSubjects;

@@ -44,28 +44,28 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	window.angular = __webpack_require__(174);
-	window.PouchDB = __webpack_require__(176);
-	window._ = __webpack_require__(192);
+	window.angular = __webpack_require__(176);
+	window.PouchDB = __webpack_require__(178);
+	window._ = __webpack_require__(194);
 	window.moment = __webpack_require__(45);
-	window.$ = __webpack_require__(193);
+	window.$ = __webpack_require__(195);
 	
-	__webpack_require__(194);
 	__webpack_require__(196);
 	__webpack_require__(198);
 	__webpack_require__(200);
-	__webpack_require__(201);
+	__webpack_require__(202);
 	__webpack_require__(203);
 	__webpack_require__(205);
-	__webpack_require__(206);
+	__webpack_require__(207);
 	__webpack_require__(208);
-	__webpack_require__(209);
+	__webpack_require__(210);
 	__webpack_require__(211);
 	__webpack_require__(213);
-	__webpack_require__(214);
-	__webpack_require__(217);
+	__webpack_require__(215);
+	__webpack_require__(216);
 	__webpack_require__(219);
-	__webpack_require__(220);
+	__webpack_require__(221);
+	__webpack_require__(222);
 
 /***/ }),
 /* 1 */,
@@ -16435,15 +16435,17 @@
 /* 171 */,
 /* 172 */,
 /* 173 */,
-/* 174 */
+/* 174 */,
+/* 175 */,
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	__webpack_require__(175);
+	__webpack_require__(177);
 	module.exports = angular;
 
 
 /***/ }),
-/* 175 */
+/* 177 */
 /***/ (function(module, exports) {
 
 	/**
@@ -49820,25 +49822,25 @@
 	!window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ }),
-/* 176 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process, global) {'use strict';
 	
 	function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 	
-	var jsExtend = __webpack_require__(177);
-	var debug = _interopDefault(__webpack_require__(178));
-	var inherits = _interopDefault(__webpack_require__(181));
-	var lie = _interopDefault(__webpack_require__(182));
-	var pouchdbCollections = __webpack_require__(184);
-	var getArguments = _interopDefault(__webpack_require__(185));
+	var jsExtend = __webpack_require__(179);
+	var debug = _interopDefault(__webpack_require__(180));
+	var inherits = _interopDefault(__webpack_require__(183));
+	var lie = _interopDefault(__webpack_require__(184));
+	var pouchdbCollections = __webpack_require__(186);
+	var getArguments = _interopDefault(__webpack_require__(187));
 	var events = __webpack_require__(3);
-	var scopedEval = _interopDefault(__webpack_require__(186));
-	var Md5 = _interopDefault(__webpack_require__(187));
-	var vuvuzela = _interopDefault(__webpack_require__(188));
-	var PromisePool = _interopDefault(__webpack_require__(189));
-	var pouchdbCollate = __webpack_require__(190);
+	var scopedEval = _interopDefault(__webpack_require__(188));
+	var Md5 = _interopDefault(__webpack_require__(189));
+	var vuvuzela = _interopDefault(__webpack_require__(190));
+	var PromisePool = _interopDefault(__webpack_require__(191));
+	var pouchdbCollate = __webpack_require__(192);
 	
 	/* istanbul ignore next */
 	var PouchPromise = typeof Promise === 'function' ? Promise : lie;
@@ -60514,7 +60516,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6), (function() { return this; }())))
 
 /***/ }),
-/* 177 */
+/* 179 */
 /***/ (function(module, exports) {
 
 	(function() { 
@@ -60547,7 +60549,7 @@
 	}).call(this);
 
 /***/ }),
-/* 178 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	
@@ -60557,7 +60559,7 @@
 	 * Expose `debug()` as the module.
 	 */
 	
-	exports = module.exports = __webpack_require__(179);
+	exports = module.exports = __webpack_require__(181);
 	exports.log = log;
 	exports.formatArgs = formatArgs;
 	exports.save = save;
@@ -60721,7 +60723,7 @@
 
 
 /***/ }),
-/* 179 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	
@@ -60737,7 +60739,7 @@
 	exports.disable = disable;
 	exports.enable = enable;
 	exports.enabled = enabled;
-	exports.humanize = __webpack_require__(180);
+	exports.humanize = __webpack_require__(182);
 	
 	/**
 	 * The currently active debug mode names, and names to skip.
@@ -60924,7 +60926,7 @@
 
 
 /***/ }),
-/* 180 */
+/* 182 */
 /***/ (function(module, exports) {
 
 	/**
@@ -61055,7 +61057,7 @@
 
 
 /***/ }),
-/* 181 */
+/* 183 */
 /***/ (function(module, exports) {
 
 	if (typeof Object.create === 'function') {
@@ -61084,11 +61086,11 @@
 
 
 /***/ }),
-/* 182 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
-	var immediate = __webpack_require__(183);
+	var immediate = __webpack_require__(185);
 	
 	/* istanbul ignore next */
 	function INTERNAL() {}
@@ -61369,7 +61371,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
-/* 183 */
+/* 185 */
 /***/ (function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -61445,7 +61447,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }),
-/* 184 */
+/* 186 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -61520,7 +61522,7 @@
 
 
 /***/ }),
-/* 185 */
+/* 187 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -61544,7 +61546,7 @@
 	}
 
 /***/ }),
-/* 186 */
+/* 188 */
 /***/ (function(module, exports) {
 
 	// Generated by CoffeeScript 1.9.2
@@ -61572,7 +61574,7 @@
 
 
 /***/ }),
-/* 187 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	(function (factory) {
@@ -62281,7 +62283,7 @@
 
 
 /***/ }),
-/* 188 */
+/* 190 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -62460,7 +62462,7 @@
 
 
 /***/ }),
-/* 189 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (root, factory) {
@@ -62682,7 +62684,7 @@
 
 
 /***/ }),
-/* 190 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62691,7 +62693,7 @@
 	var MAGNITUDE_DIGITS = 3; // ditto
 	var SEP = ''; // set to '_' for easier debugging 
 	
-	var utils = __webpack_require__(191);
+	var utils = __webpack_require__(193);
 	
 	exports.collate = function (a, b) {
 	
@@ -63041,7 +63043,7 @@
 
 
 /***/ }),
-/* 191 */
+/* 193 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -63116,7 +63118,7 @@
 	};
 
 /***/ }),
-/* 192 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscore.js 1.8.3
@@ -64670,7 +64672,7 @@
 
 
 /***/ }),
-/* 193 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -74490,15 +74492,15 @@
 
 
 /***/ }),
-/* 194 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	__webpack_require__(195);
+	__webpack_require__(197);
 	module.exports = 'ngResource';
 
 
 /***/ }),
-/* 195 */
+/* 197 */
 /***/ (function(module, exports) {
 
 	/**
@@ -75362,15 +75364,15 @@
 
 
 /***/ }),
-/* 196 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	__webpack_require__(197);
+	__webpack_require__(199);
 	module.exports = 'ngSanitize';
 
 
 /***/ }),
-/* 197 */
+/* 199 */
 /***/ (function(module, exports) {
 
 	/**
@@ -76132,15 +76134,15 @@
 
 
 /***/ }),
-/* 198 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	__webpack_require__(199);
+	__webpack_require__(201);
 	module.exports = 'ngCookies';
 
 
 /***/ }),
-/* 199 */
+/* 201 */
 /***/ (function(module, exports) {
 
 	/**
@@ -76477,7 +76479,7 @@
 
 
 /***/ }),
-/* 200 */
+/* 202 */
 /***/ (function(module, exports) {
 
 	/**
@@ -81021,16 +81023,16 @@
 	})(window, window.angular);
 
 /***/ }),
-/* 201 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	__webpack_require__(202);
+	__webpack_require__(204);
 	module.exports = 'angular-storage';
 	
 
 
 /***/ }),
-/* 202 */
+/* 204 */
 /***/ (function(module, exports) {
 
 	(function() {
@@ -81222,16 +81224,16 @@
 	}());
 
 /***/ }),
-/* 203 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	__webpack_require__(204);
+	__webpack_require__(206);
 	module.exports = 'angular-jwt';
 	
 
 
 /***/ }),
-/* 204 */
+/* 206 */
 /***/ (function(module, exports) {
 
 	(function() {
@@ -81368,7 +81370,7 @@
 	}());
 
 /***/ }),
-/* 205 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -81384,10 +81386,10 @@
 	  'use strict';
 	  if (typeof module !== 'undefined' && module.exports) {
 	    // CommonJS
-	    module.exports = factory(__webpack_require__(174));
+	    module.exports = factory(__webpack_require__(176));
 	  } else if (true) {
 	    // AMD
-	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(174)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(176)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	  } else {
 	    // Global Variables
 	    factory(root.angular);
@@ -82217,16 +82219,16 @@
 
 
 /***/ }),
-/* 206 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	var contentful = __webpack_require__(207);
+	var contentful = __webpack_require__(209);
 	module.exports = function () {
 	  return contentful;
 	};
 
 /***/ }),
-/* 207 */
+/* 209 */
 /***/ (function(module, exports) {
 
 	!function () {
@@ -82330,12 +82332,12 @@
 	}();
 
 /***/ }),
-/* 208 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	(function(root, factory) {
 	if (true) {
-	module.exports = factory(__webpack_require__(174));
+	module.exports = factory(__webpack_require__(176));
 	} else if (typeof define === "function" && define.amd) {
 	define(['angular'], factory);
 	} else{
@@ -85784,16 +85786,16 @@
 	}));
 
 /***/ }),
-/* 209 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	__webpack_require__(210);
+	__webpack_require__(212);
 	
 	module.exports = 'ui.bootstrap';
 
 
 /***/ }),
-/* 210 */
+/* 212 */
 /***/ (function(module, exports) {
 
 	/*
@@ -93145,15 +93147,15 @@
 	angular.module('ui.bootstrap.typeahead').run(function() {!angular.$$csp().noInlineStyle && !angular.$$uibTypeaheadCss && angular.element(document).find('head').prepend('<style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style>'); angular.$$uibTypeaheadCss = true; });
 
 /***/ }),
-/* 211 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	__webpack_require__(212);
+	__webpack_require__(214);
 	module.exports = 'angularUtils.directives.dirPagination';
 
 
 /***/ }),
-/* 212 */
+/* 214 */
 /***/ (function(module, exports) {
 
 	/**
@@ -93798,7 +93800,7 @@
 
 
 /***/ }),
-/* 213 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	(function() {
@@ -93836,7 +93838,7 @@
 	var angular;
 	
 	if (typeof module !== 'undefined' && typeof module.exports === 'object') {
-	  angular = __webpack_require__(174);
+	  angular = __webpack_require__(176);
 	  module.exports = MODULE_NAME;
 	} else {
 	  angular = window.angular;
@@ -94010,7 +94012,7 @@
 
 
 /***/ }),
-/* 214 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*
@@ -94023,7 +94025,7 @@
 	
 	'use strict';
 	
-	var unindent = __webpack_require__(215);
+	var unindent = __webpack_require__(217);
 	
 	  /**
 	   * @ngdoc overview
@@ -94203,7 +94205,7 @@
 	    var m;
 	
 	    try {
-	      m = __webpack_require__(216);
+	      m = __webpack_require__(218);
 	    } catch (err) {
 	      m = $window.marked || marked;
 	    }
@@ -94364,7 +94366,7 @@
 
 
 /***/ }),
-/* 215 */
+/* 217 */
 /***/ (function(module, exports) {
 
 	module.exports = function unindent(text) {
@@ -94399,7 +94401,7 @@
 
 
 /***/ }),
-/* 216 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -95692,17 +95694,17 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }),
-/* 217 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	const mailchimp = __webpack_require__(218);
+	const mailchimp = __webpack_require__(220);
 	
 	module.exports = function () {
 	    return mailchimp;
 	};
 
 /***/ }),
-/* 218 */
+/* 220 */
 /***/ (function(module, exports) {
 
 	(function () {
@@ -95783,7 +95785,7 @@
 	})();
 
 /***/ }),
-/* 219 */
+/* 221 */
 /***/ (function(module, exports) {
 
 	/**
@@ -96091,13 +96093,13 @@
 
 
 /***/ }),
-/* 220 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var require;/* WEBPACK VAR INJECTION */(function(module) {(function commonJS(require, module) {
 	    'use strict';
 	
-	    __webpack_require__(221);
+	    __webpack_require__(223);
 	
 	    module.exports = '720kb.socialshare';
 	}(require, module));
@@ -96105,7 +96107,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(39)(module)))
 
 /***/ }),
-/* 221 */
+/* 223 */
 /***/ (function(module, exports) {
 
 	/*

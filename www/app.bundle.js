@@ -57,9 +57,9 @@
 	        accessToken: '9cac4721c786eeb0f90a61b46d3a0a4d6d32635552a087b9e50b38d2fcfa5b00'
 	    });
 	    $urlRouterProvider.otherwise('/*');
-	    $stateProvider.state('site', __webpack_require__(164)).state('site.404', __webpack_require__(166)).state('site.home', __webpack_require__(168));
+	    $stateProvider.state('site', __webpack_require__(164)).state('site.404', __webpack_require__(166)).state('site.home', __webpack_require__(168))
 	    // .state('site.about', require('./components/templates/about/about-controller'))
-	    // .state('site.contact', require('./components/templates/contact/contact-controller'))
+	    .state('site.contact', __webpack_require__(170));
 	    // .state('site.services', require('./components/templates/services/services-controller'))
 	    // .state('site.board-list', require('./components/templates/board/board-list-controller'))
 	    // .state('site.board-member', require('./components/templates/board/board-member-controller'))
@@ -67,7 +67,7 @@
 	        enabled: true,
 	        requireBase: false
 	    });
-	}]).directive('navFooter', __webpack_require__(170)).directive('navHeader', __webpack_require__(172));
+	}]).directive('navFooter', __webpack_require__(172)).directive('navHeader', __webpack_require__(174));
 
 /***/ }),
 /* 1 */
@@ -26656,17 +26656,125 @@
 /* 169 */
 /***/ (function(module, exports) {
 
-	module.exports = "<div id=\"homePage\">\n  <!--  Content  -->\n  <div id=\"page-wrapper\">\n\n    <!-- Header -->\n    <header id=\"header\" class=\"navbar-brand\">\n      <a href=\"/\"><img src=\"/img/CititBotLogo-Final.png\"></a>\n      <nav id=\"nav\">\n        <ul>\n          <li><a href=\"/\">Home</a></li>\n          <li>\n            <a href=\"#\" class=\"icon fa-angle-down\">Layouts</a>\n            <ul>\n              <li><a href=\"generic.html\">Generic</a></li>\n              <li><a href=\"contact.html\">Contact</a></li>\n              <li><a href=\"elements.html\">Elements</a></li>\n              <li>\n                <a href=\"#\">Submenu</a>\n                <ul>\n                  <li><a href=\"#\">Option One</a></li>\n                  <li><a href=\"#\">Option Two</a></li>\n                  <li><a href=\"#\">Option Three</a></li>\n                  <li><a href=\"#\">Option Four</a></li>\n                </ul>\n              </li>\n            </ul>\n          </li>\n          <li><a href=\"#\" class=\"button\">Sign Up</a></li>\n        </ul>\n      </nav>\n    </header>\n\n    <!-- Banner -->\n    <section id=\"banner\" class=\"video-container\">\n      <video src=\"Citibot.mp4\" autoplay loop playsinline></video>\n      <div class=\"callout\">\n        <!-- <h1 style=\"color:black;\">CITIBOT</h1> -->\n        <!-- <div style=\"color:black;\">CSS Background-Size: Cover for Inline Images &amp; Videos</div> -->\n      </div>\n    </section>\n\n    <!-- Main -->\n    <section id=\"main\" class=\"container\">\n      <section class=\"box special features\">\n        <div class=\"features-row\">\n          <section>\n            <span class=\"icon major fa-bolt accent2\"></span>\n            <h3>Magna etiam</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n          </section>\n          <section>\n            <span class=\"icon major fa-area-chart accent3\"></span>\n            <h3>Ipsum dolor</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n          </section>\n        </div>\n        <div class=\"features-row\">\n          <section>\n            <span class=\"icon major fa-cloud accent4\"></span>\n            <h3>Sed feugiat</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n          </section>\n          <section>\n            <span class=\"icon major fa-lock accent5\"></span>\n            <h3>Enim phasellus</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n          </section>\n        </div>\n      </section>\n\n      <div class=\"row\">\n        <div class=\"6u 12u(narrower)\">\n\n          <section class=\"box special\">\n            <span class=\"image featured\"><img src=\"images/pic02.jpg\" alt=\"\" /></span>\n            <h3>Sed lorem adipiscing</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n            <ul class=\"actions\">\n              <li><a href=\"#\" class=\"button alt\">Learn More</a></li>\n            </ul>\n          </section>\n\n        </div>\n        <div class=\"6u 12u(narrower)\">\n\n          <section class=\"box special\">\n            <span class=\"image featured\"><img src=\"images/pic03.jpg\" alt=\"\" /></span>\n            <h3>Accumsan integer</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n            <ul class=\"actions\">\n              <li><a href=\"#\" class=\"button alt\">Learn More</a></li>\n            </ul>\n          </section>\n\n        </div>\n      </div>\n\n    </section>\n    <section>\n      <a id=\"contact\"></a>\n      <div class=\"bloc bgc-davys-grey d-bloc\" id=\"bloc-5\">\n        <div class=\"container bloc-lg\">\n          <div class=\"row\">\n            <div class=\"col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1\" style=\"text-align:center;\">\n              <!-- Begin MailChimp Signup Form -->\n              <link href=\"//cdn-images.mailchimp.com/embedcode/classic-10_7.css\" rel=\"stylesheet\" type=\"text/css\">\n              <div id=\"mc_embed_signup\">\n                <form action=\"//citibot.us13.list-manage.com/subscribe/post?u=d6f6e39c7473e9c1c10e566da&amp;id=022c11f15f\" method=\"post\" id=\"mc-embedded-subscribe-form\" name=\"mc-embedded-subscribe-form\" class=\"validate\" target=\"_blank\" novalidate>\n                  <div id=\"mc_embed_signup_scroll\">\n                    <h3 for=\"mce-EMAIL\" style=\"color:white; text-align:center;\">CONTACT US</h3>\n                    <h2 style=\"color:white; text-align:center;\">We're ready to put Citibot to work for YOU.</h2>\n                    <h4 style=\"color:white; text-align:center;\">Fill out the form below to find out how:</h4>\n                    <div class=\"indicates-required\"><span class=\"asterisk\">*</span> indicates required</div>\n                    <div class=\"row\" style=\"margin-bottom:10px;\">\n                      <div class=\"col-xs-6\">\n                        <div class=\"mc-field-group\" style=\"width:100%;\">\n                          <input type=\"text\" value=\"\" name=\"FNAME\" class=\"contactInput required\" placeholder=\"First Name*\" id=\"mce-FNAME\" style=\"background-color:#818181;color:white;border-radius:0;border:none;padding:15px;\">\n                        </div>\n                      </div>\n                      <div class=\"col-xs-6\">\n                        <div class=\"mc-field-group\" style=\"width:100%;\">\n                          <input type=\"text\" value=\"\" name=\"LNAME\" class=\"contactInput required\" placeholder=\"Last Name*\" id=\"mce-LNAME\" style=\"background-color:#818181;color:white;border-radius:0;border:none;padding:15px;\">\n                        </div>\n                      </div>\n                    </div>\n                    <div class=\"row\">\n                      <div class=\"col-xs-12\">\n                        <div class=\"mc-field-group\" style=\"width:100%;\">\n\n                          <input type=\"text\" value=\"\" name=\"CITY\" class=\"contactInput\" placeholder=\"City\" id=\"mce-CITY\" style=\"background-color:#818181;color:white;border-radius:0;border:none;padding:15px;\">\n                        </div>\n                      </div>\n                    </div>\n                    <div class=\"row\">\n                      <div class=\"col-xs-12\">\n                        <div class=\"mc-field-group\" style=\"width:100%;\">\n\n                          <input type=\"email\" value=\"\" name=\"EMAIL\" placeholder=\"Email*\" class=\"contactInput required email\" id=\"mce-EMAIL\" style=\"background-color:#818181;color:white;border-radius:0;border:none;padding:15px;\">\n                        </div>\n                      </div>\n                    </div>\n                    <div class=\"row\">\n                      <div class=\"col-xs-12\">\n                        <div class=\"mc-field-group\" style=\"width:100%;\">\n                          <input type=\"text\" name=\"PHONE\" class=\"contactInput\" placeholder=\"Telephone\" value=\"\" id=\"mce-PHONE\" style=\"background-color:#818181;color:white;border-radius:0;border:none;padding:15px;\">\n                        </div>\n                      </div>\n                    </div>\n                    <div class=\"row\">\n                      <div class=\"col-xs-12\">\n                        <div class=\"mc-field-group\" style=\"width:100%;\">\n\n                          <textarea value=\"\" placeholder=\"Comments...\" style=\"width:100%; background-color:#818181;color:white;border-radius:0;border:none;padding-left:30px;padding-top:15px;\" rows=\"7\" name=\"COMMENTS\" class=\"contactInput\" id=\"mce-COMMENTS\"></textarea>\n                        </div>\n                      </div>\n                    </div>\n                    <div class=\"row\">\n                      <div class=\"col-xs-12\">\n                        <div id=\"mce-responses\">\n                          <div class=\"response\" id=\"mce-error-response\" style=\"display:none\"></div>\n                          <div class=\"response\" id=\"mce-success-response\" style=\"display:none\"></div>\n                        </div>\n                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n                        <div style=\"position: absolute; left: -5000px;\" aria-hidden=\"true\"><input type=\"text\" name=\"b_d6f6e39c7473e9c1c10e566da_022c11f15f\" tabindex=\"-1\" value=\"\"></div>\n                        <div class=\"clear\" style=\"\">\n                          <input type=\"submit\" value=\"submit\" name=\"submit\" id=\"mc-embedded-subscribe\" class=\"contactBtn\">\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </form>\n              </div>\n              <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>\n              <script type='text/javascript'>\n                (function($) {\n                  window.fnames = new Array();\n                  window.ftypes = new Array();\n                  fnames[1] = 'FNAME';\n                  ftypes[1] = 'text';\n                  fnames[2] = 'LNAME';\n                  ftypes[2] = 'text';\n                  fnames[5] = 'CITY';\n                  ftypes[5] = 'text';\n                  fnames[0] = 'EMAIL';\n                  ftypes[0] = 'email';\n                  fnames[3] = 'PHONE';\n                  ftypes[3] = 'number';\n                  fnames[4] = 'COMMENTS';\n                  ftypes[4] = 'text';\n                }(jQuery));\n                var $mcj = jQuery.noConflict(true);\n              </script>\n              <!--End mc_embed_signup-->\n            </div>\n          </div>\n          <div class=\"footer\">\n            <ul class=\"info\">\n              <li>(843) 324-6167</li>\n              <li><a href=\"mailto:info@citibot.io\" style=\"color:rgba(255,255,255,.7)\">info@citibot.io</a></li>\n            </ul>\n            <ul class=\"social\">\n              <li><a target=\"_blank\" href=\"https://twitter.com/citibot_io\" title=\"citibot_io\"><i class=\"fa fa-twitter fa-2x\" aria-hidden=\"true\"></i></a>\n                <li><a target=\"_blank\" href=\"https://www.facebook.com/citibotio\" title=\"citibot_io\"><i class=\"fa fa-facebook fa-2x\" aria-hidden=\"true\"></i></a>\n                  <li><a target=\"_blank\" href=\"https://www.instagram.com/citibot\" title=\"citibot_io\"><i class=\"fa fa-instagram fa-2x\" aria-hidden=\"true\"></i></a>\n          </div>\n        </div>\n      </div>\n    </section>\n\n    <!-- CTA -->\n    <section id=\"cta\">\n\n      <h2>Sign up for beta access</h2>\n      <p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>\n\n      <form>\n        <div class=\"row uniform 50%\">\n          <div class=\"8u 12u(mobilep)\">\n            <input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email Address\" />\n          </div>\n          <div class=\"4u 12u(mobilep)\">\n            <input type=\"submit\" value=\"Sign Up\" class=\"fit\" />\n          </div>\n        </div>\n      </form>\n\n    </section>\n    <!-- <article>\n    <h1>CitiBot</h1>\n  </article> -->\n\n    <!--  Video is muted & autoplays, placed after major DOM elements for performance & has an image fallback  -->\n    <!-- <video autoplay loop id=\"video-background\" muted plays-inline>\n    <source src=\"Citibot.mp4\" type=\"video/mp4\">\n  </video> -->\n  </div>\n"
+	module.exports = "<div id=\"homePage\">\n  <!--  Content  -->\n  <div id=\"page-wrapper\">\n\n    <!-- Header -->\n    <header id=\"header\" class=\"navbar-brand\">\n      <a href=\"/\"><img src=\"/img/CititBotLogo-Final.png\"></a>\n      <nav id=\"nav\">\n        <ul>\n          <li><a href=\"/\">Home</a></li>\n          <li>\n            <a href=\"#\" class=\"icon fa-angle-down\">Layouts</a>\n            <ul>\n              <li><a href=\"/generic\">Generic</a></li>\n              <li><a href=\"/contact\">Contact</a></li>\n              <!-- <li><a href=\"elements.html\">Elements</a></li> -->\n              <li>\n                <a href=\"#\">Submenu</a>\n                <ul>\n                  <li><a href=\"#\">Option One</a></li>\n                  <li><a href=\"#\">Option Two</a></li>\n                  <li><a href=\"#\">Option Three</a></li>\n                  <li><a href=\"#\">Option Four</a></li>\n                </ul>\n              </li>\n            </ul>\n          </li>\n          <li><a href=\"#\" class=\"button\">Sign Up</a></li>\n        </ul>\n      </nav>\n    </header>\n\n    <!-- Banner -->\n    <section id=\"banner\" class=\"video-container\">\n      <video src=\"Citibot.mp4\" autoplay loop muted playsinline></video>\n      <div class=\"callout\">\n        <!-- <h1 style=\"color:black;\">CITIBOT</h1> -->\n        <!-- <div style=\"color:black;\">CSS Background-Size: Cover for Inline Images &amp; Videos</div> -->\n      </div>\n    </section>\n\n    <!-- Main -->\n    <section id=\"main\" class=\"container\">\n      <section class=\"box special features\">\n        <div class=\"features-row\">\n          <section>\n            <span class=\"icon major fa-bolt accent2\"></span>\n            <h3>Magna etiam</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n          </section>\n          <section>\n            <span class=\"icon major fa-area-chart accent3\"></span>\n            <h3>Ipsum dolor</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n          </section>\n        </div>\n        <div class=\"features-row\">\n          <section>\n            <span class=\"icon major fa-cloud accent4\"></span>\n            <h3>Sed feugiat</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n          </section>\n          <section>\n            <span class=\"icon major fa-lock accent5\"></span>\n            <h3>Enim phasellus</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n          </section>\n        </div>\n      </section>\n\n      <div class=\"row\">\n        <div class=\"6u 12u(narrower)\">\n\n          <section class=\"box special\">\n            <span class=\"image featured\"><img src=\"images/pic02.jpg\" alt=\"\" /></span>\n            <h3>Sed lorem adipiscing</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n            <ul class=\"actions\">\n              <li><a href=\"#\" class=\"button alt\">Learn More</a></li>\n            </ul>\n          </section>\n\n        </div>\n        <div class=\"6u 12u(narrower)\">\n\n          <section class=\"box special\">\n            <span class=\"image featured\"><img src=\"images/pic03.jpg\" alt=\"\" /></span>\n            <h3>Accumsan integer</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n            <ul class=\"actions\">\n              <li><a href=\"#\" class=\"button alt\">Learn More</a></li>\n            </ul>\n          </section>\n\n        </div>\n      </div>\n\n    </section>\n\n    <!-- CTA -->\n    <section id=\"cta\">\n\n      <h2>Sign up for beta access</h2>\n      <p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>\n\n      <form>\n        <div class=\"row uniform 50%\">\n          <div class=\"8u 12u(mobilep)\">\n            <input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email Address\" />\n          </div>\n          <div class=\"4u 12u(mobilep)\">\n            <input type=\"submit\" value=\"Sign Up\" class=\"fit\" />\n          </div>\n        </div>\n      </form>\n\n    </section>\n    <!-- <article>\n    <h1>CitiBot</h1>\n  </article> -->\n\n    <!--  Video is muted & autoplays, placed after major DOM elements for performance & has an image fallback  -->\n    <!-- <video autoplay loop id=\"video-background\" muted plays-inline>\n    <source src=\"Citibot.mp4\" type=\"video/mp4\">\n  </video> -->\n  </div>\n"
 
 /***/ }),
 /* 170 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = {
+		url: '/contact',
+		template: __webpack_require__(171),
+		controller: ContactController,
+		controllerAs: 'contactCtrl'
+	};
+	
+	function ContactController(contentful, $window, $state, $http, $timeout, $scope) {
+		var vm = this;
+		$window.scrollTo(0, 0);
+		vm.showConfirmationLayer = false;
+		vm.showErrorLayer = false;
+	
+		contentful.entries('content_type=contactPage&include=3').then(function (res) {
+			vm.sideBarData = res.data.items[0];
+			vm.contactFormSubjects = vm.sideBarData.fields.contactFormSubjects;
+			if (vm.sideBarData.fields.pageTitleSeo) {
+				document.title = vm.sideBarData.fields.pageTitleSeo;
+			}
+			if (vm.sideBarData.fields.pageSpecificMetaDescriptionSeo) {
+				var meta = document.getElementsByTagName("meta");
+				for (var i = 0; i < meta.length; i++) {
+					if (meta[i].name.toLowerCase() === "description") {
+						meta[i].content = vm.sideBarData.fields.pageSpecificMetaDescriptionSeo;
+					}
+				}
+			}
+		});
+	
+		vm.submitForm = function (formValid) {
+			if (formValid) {
+				var postUrl = "/api/email";
+				var reason = getRecipient(vm.contactForm.reason);
+				var obj = {
+					fromName: vm.contactForm.firstName + ' ' + vm.contactForm.lastName,
+					fromEmail: vm.contactForm.email,
+					fromCompany: vm.contactForm.company,
+					toName: reason.recipientName,
+					toEmail: reason.recipientEmail,
+					subject: reason.title,
+					emailBody: vm.contactForm.extraInfo
+				};
+	
+				// FAKE FORM POST FOR DEVELOPMENT
+				// console.log('valid, emailing ' + obj.toEmail)
+				// vm.showConfirmationLayer = true;
+				// $timeout(function(){
+				//   vm.contactForm = '';
+				//   vm.showConfirmationLayer = false;
+				// }, 5000);
+	
+				$http.post(postUrl, obj).then(function success(res) {
+					console.log('success: ', res);
+					vm.showConfirmationLayer = true;
+					$timeout(function () {
+						vm.contactForm = '';
+						vm.showConfirmationLayer = false;
+					}, 5000);
+				}, function error(err) {
+					console.log('error: ', err);
+					window.glob = err;
+					vm.showErrorLayer = true;
+					$timeout(function () {
+						vm.contactForm = '';
+						vm.showErrorLayer = false;
+					}, 5000);
+				});
+			} else {
+				console.log("form invalid");
+			}
+		};
+	
+		function getRecipient(reason) {
+			switch (reason) {
+				case vm.contactFormSubjects[0].fields.title:
+					return vm.contactFormSubjects[0].fields;
+				case vm.contactFormSubjects[1].fields.title:
+					return vm.contactFormSubjects[1].fields;
+				case vm.contactFormSubjects[2].fields.title:
+					return vm.contactFormSubjects[2].fields;
+				case vm.contactFormSubjects[3].fields.title:
+					return vm.contactFormSubjects[3].fields;
+				case vm.contactFormSubjects[4].fields.title:
+					return vm.contactFormSubjects[4].fields;
+				case vm.contactFormSubjects[5].fields.title:
+					return vm.contactFormSubjects[5].fields;
+				case vm.contactFormSubjects[6].fields.title:
+					return vm.contactFormSubjects[6].fields;
+				default:
+					return {
+						recipientName: 'Inquiries',
+						recipientEmail: 'hosea@obviouslee.com',
+						title: reason
+					};
+			}
+		}
+	}
+
+/***/ }),
+/* 171 */
+/***/ (function(module, exports) {
+
+	module.exports = "<div id=\"contactPage\">\n  <div id=\"page-wrapper\">\n  <!-- Header -->\n  <header id=\"header\" class=\"navbar-brand\">\n    <a href=\"/\"><img src=\"/img/CititBotLogo-Final.png\"></a>\n    <nav id=\"nav\">\n      <ul>\n        <li><a href=\"/\">Home</a></li>\n        <li>\n          <a href=\"#\" class=\"icon fa-angle-down\">Layouts</a>\n          <ul>\n            <li><a href=\"/generic\">Generic</a></li>\n            <li><a href=\"/contact\">Contact</a></li>\n            <!-- <li><a href=\"elements.html\">Elements</a></li> -->\n            <li>\n              <a href=\"#\">Submenu</a>\n              <ul>\n                <li><a href=\"#\">Option One</a></li>\n                <li><a href=\"#\">Option Two</a></li>\n                <li><a href=\"#\">Option Three</a></li>\n                <li><a href=\"#\">Option Four</a></li>\n              </ul>\n            </li>\n          </ul>\n        </li>\n        <li><a href=\"#\" class=\"button\">Sign Up</a></li>\n      </ul>\n    </nav>\n  </header>\n  <section class=\"container\">\n    <div class=\"col-sm-12 box\" style=\"text-align:center; padding-top:6em;\">\n  <h2><strong>Contact Us</strong></h2>\n</div>\n</section>\n\n  <br/>\n  <section class=\"container\">\n    <form id=\"contact-form\" class=\"contact-form\" cf-form>\n       <div class=\"container\">\n         <div class=\"row\">\n           <div class=\"col-sm-12\">\n             <input type=\"name\" class=\"form-control\" placeholder=\"Name (required)\">\n           </div>\n           <div class=\"col-sm-12\">\n             <input type=\"email\" class=\"form-control\" placeholder=\"E-Mail (required)\">\n           </div>\n           <div class=\"col-sm-12\">\n             <input type=\"subject\" class=\"form-control\" placeholder=\"Subject (optional)\">\n           </div>\n         </div>\n         <br/>\n         <div class=\"row\">\n           <div class=\"col-sm-12\"><textarea rows=\"3\" style=\"max-height:8em;\"class=\"form-control\" id=\"message\" placeholder=\"Message (required)\"></textarea></div>\n         </div>\n         <br/>\n         <div class=\"col-sm-12\"  style=\"text-align:center;\">\n          <div class=\"btn btn-default\">Send Message</div>\n        </div>\n       </div>\n       </form>\n          <!-- <div class=\"emailConfirmationLayer\" data-ng-show=\"contactCtrl.showConfirmationLayer\">\n            <h2 class=\"tk-clarendon-wide\">SUCCESS!</h2>\n            <p class=\"futuraHeavy text-uppercase\">Thanks for your interest!</p>\n            <p>Return to our\n              <a href=\"/\">homepage.</a>\n            </p>\n          </div> -->\n          <!-- <div class=\"emailConfirmationLayer\" data-ng-show=\"contactCtrl.showErrorLayer\">\n            <h2 class=\"tk-clarendon-wide\">WE'RE SORRY!</h2>\n            <p class=\"futuraHeavy text-uppercase\">An error occurred while trying to deliver your message through the website.</p>\n            <p>Return to our\n              <a href=\"/\">homepage.</a>\n            </p>\n          </div> -->\n          <!-- <section>\n          <div id='map'></div>\n        </section> -->\n      </section>\n    </div>\n</div>\n"
+
+/***/ }),
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = function () {
 	    return {
 	        restrict: 'EA',
 	        replace: true,
-	        template: __webpack_require__(171),
+	        template: __webpack_require__(173),
 	        controller: controller
 	    };
 	};
@@ -26682,20 +26790,20 @@
 	}
 
 /***/ }),
-/* 171 */
+/* 173 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div id=\"footer\">\n</div>\n"
 
 /***/ }),
-/* 172 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = function () {
 	    return {
 	        restrict: 'EA',
 	        replace: true,
-	        template: __webpack_require__(173),
+	        template: __webpack_require__(175),
 	        controller: controller
 	    };
 	};
@@ -26707,7 +26815,7 @@
 	}
 
 /***/ }),
-/* 173 */
+/* 175 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div id=\"header\">\n  <div class=\"bloc bgc-white l-bloc\" style=\"position: fixed;z-index: 25;top: 0; left:0; right:20;\" id=\"bloc-0\">\n\n    <div class=\"container bloc-sm\">\n      <nav class=\"navbar row\">\n        <div class=\"navbar-header\">\n          <a class=\"navbar-brand\" href=\"\"><img class=\"logo\"src=\"img/CititBotLogo-Final.png\" alt=\"logo\" width=\"300\" /></a>\n          <button id=\"nav-toggle\" type=\"button\" class=\"ui-navbar-toggle navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-1\">\n          <span class=\"sr-only\">Toggle navigation</span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span>\n        </button>\n        </div>\n        <div class=\"collapse navbar-collapse navbar-1\" style=\"margin-right:20px;\">\n          <ul class=\"site-navigation nav navbar-nav \">\n            <li>\n              <a href=\"#demovid\">Demo</a>\n            </li>\n            <li>\n              <a href=\"#features\">Features</a>\n            </li>\n            <li>\n              <a href=\"#value\">Value</a>\n            </li>\n            <li>\n              <a href=\"#contact\">Contact</a>\n            </li>\n          </ul>\n        </div>\n      </nav>\n    </div>\n  </div>\n</div>\n"
