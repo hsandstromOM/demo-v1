@@ -11,7 +11,6 @@ angular.module('app', [
         'contentful',
         'ui.bootstrap',
         'angularUtils.directives.dirPagination',
-        'stripe.checkout',
         'hc.marked',
         'slugifier',
         '720kb.socialshare'
@@ -19,8 +18,8 @@ angular.module('app', [
     .constant('ee', ee)
     .constant('moment', moment)
     .constant('underscore', underscore)
-    .config(['$urlRouterProvider', '$stateProvider', 'contentfulProvider', 'StripeCheckoutProvider', '$locationProvider', '$compileProvider',
-        function($urlRouterProvider, $stateProvider, contentfulProvider, StripeCheckoutProvider, $locationProvider, $compileProvider) {
+    .config(['$urlRouterProvider', '$stateProvider', 'contentfulProvider', '$locationProvider', '$compileProvider',
+        function($urlRouterProvider, $stateProvider, contentfulProvider, $locationProvider, $compileProvider) {
             // Performance improvement/cleaner markup
             // https://medium.com/swlh/improving-angular-performance-with-1-line-of-code-a1fb814a6476
             $compileProvider.debugInfoEnabled(false);

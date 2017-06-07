@@ -5,10 +5,10 @@
   },
   "env": {
     "MAILGUN_PASS": {
-      "required": true
+      "required": false
     },
     "MAILGUN_USER": {
-      "required": true
+      "required": false
     }
   },
   "formation": {

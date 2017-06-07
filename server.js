@@ -41,7 +41,7 @@ app.post('/api/send', jsonParser, function(req, res){
     // text: req.query.text
 
     from: 'do-not-reply@citibot.com',
-    to: "info@citibot.io",
+    to: "hosea@obviouslee.com",
     subject: 'Citibot Newsletter Signup',
     text: '\n\nEmail: ' + text.email
 
