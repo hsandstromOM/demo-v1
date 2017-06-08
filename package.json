@@ -82,6 +82,7 @@
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
+    "jshint": "^2.9.4",
     "morgan": "^1.7.0",
     "node-sass": "^3.13.1",
     "nodemon": "^1.11.0"
@@ -91,7 +92,7 @@
     "start": "node server.js",
     "dev": "webpack --watch & nodemon server.js",
     "prod": "webpack -p",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/jshint/bin/jshint server.js",
     "build-css": "node-sass --include-path scss scss/*.scss www/main.css"
   },
   "repository": {
