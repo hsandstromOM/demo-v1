@@ -1,8 +1,6 @@
-
-// Load in configs (only necessary for dev)
-// require('dotenv').config();
-
+const compression = require('compression');
 const express = require('express');
+const helmet = require('helmet');
 const sendHtml = require('send-data/html');
 const fs = require('fs');
 const ejs = require('ejs');
@@ -10,7 +8,6 @@ const path = require('path');
 const apiRoutes = require('./routes/api');
 const redirectRoutes = require('./routes/redirects');
 const prerender = require('prerender-node');
-const compression = require('compression');
 const gzippo = require('gzippo');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -39,6 +36,9 @@ const options = {
     res.set('x-timestamp', Date.now())
   }
 }
+
+app.use(helmet());
+app.use(compression(`${__dirname}/www`));
 
 var smtpTransport = nodemailer.createTransport(obj);
 
@@ -79,7 +79,6 @@ const server = app.listen(app.get('port'), function() {
 
 // Set the static asset directory
 app.use(gzippo.staticGzip(`${__dirname}/www`));
-app.use(compression(`${__dirname}/www`));
 app.use(express.static(`${__dirname}/www`, options));
 app.use(cors());
 app.use(prerender).set('prerenderServiceUrl', 'https://demo-v1-om.herokuapp.com/').set('prerenderToken', process.env.PRERENDER_TOKEN);
