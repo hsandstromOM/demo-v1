@@ -30,6 +30,16 @@ const obj = mandrillTransport({
   }
 });
 
+const options = {
+  dotfiles: 'ignore',
+  etag: false,
+  extensions: ['htm', 'html'],
+  maxAge: '1d',
+  setHeaders: function (res, path, stat) {
+    res.set('x-timestamp', Date.now())
+  }
+}
+
 var smtpTransport = nodemailer.createTransport(obj);
 
 app.post('/api/send', jsonParser, function(req, res){
@@ -70,6 +80,7 @@ const server = app.listen(app.get('port'), function() {
 // Set the static asset directory
 app.use(gzippo.staticGzip(`${__dirname}/www`));
 app.use(compression(`${__dirname}/www`));
+app.use(express.static(`${__dirname}/www`, options));
 app.use(cors());
 app.use(prerender).set('prerenderServiceUrl', 'https://demo-v1-om.herokuapp.com/').set('prerenderToken', process.env.PRERENDER_TOKEN);
 app.use(bodyParser.json());       // to support JSON-encoded bodies
