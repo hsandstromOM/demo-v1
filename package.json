@@ -92,7 +92,6 @@
     "start": "node server.js",
     "dev": "webpack --watch & nodemon server.js",
     "prod": "webpack -p",
-    "test": "./node_modules/jshint/bin/jshint server.js",
     "build-css": "node-sass --include-path scss scss/*.scss www/main.css"
   },
   "repository": {
