@@ -25,14 +25,16 @@ angular.module('app', [
             $compileProvider.debugInfoEnabled(false);
             // Contentful configs
             contentfulProvider.setOptions({
-                space: 'b93rrsa5anm6',
-                accessToken: '9cac4721c786eeb0f90a61b46d3a0a4d6d32635552a087b9e50b38d2fcfa5b00',
+                space: 't2wg3bafv0z8',
+                accessToken: '4ea268c4881b7dd9851ab42d784589b65ad86b5c60c82582972a57504b5f8e0d',
             });
             $urlRouterProvider.otherwise('/*');
             $stateProvider
                 .state('site', require('./components/layout'))
                 .state('site.404', require('./components/templates/404/404-controller'))
                 .state('site.home', require('./components/templates/home/home-controller'))
+                .state('site.blog', require('./components/templates/blog/blog-controller'))
+                .state('site.blog.item', require('./components/templates/blog/blog-item-controller'))
                 // .state('site.about', require('./components/templates/about/about-controller'))
                 .state('site.contact', require('./components/templates/contact/contact-controller'))
                 // .state('site.services', require('./components/templates/services/services-controller'))

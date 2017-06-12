@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "www/";
+/******/ 	__webpack_require__.p = "www";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -53,13 +53,13 @@
 	    $compileProvider.debugInfoEnabled(false);
 	    // Contentful configs
 	    contentfulProvider.setOptions({
-	        space: 'b93rrsa5anm6',
-	        accessToken: '9cac4721c786eeb0f90a61b46d3a0a4d6d32635552a087b9e50b38d2fcfa5b00'
+	        space: 't2wg3bafv0z8',
+	        accessToken: '4ea268c4881b7dd9851ab42d784589b65ad86b5c60c82582972a57504b5f8e0d'
 	    });
 	    $urlRouterProvider.otherwise('/*');
-	    $stateProvider.state('site', __webpack_require__(164)).state('site.404', __webpack_require__(166)).state('site.home', __webpack_require__(168))
+	    $stateProvider.state('site', __webpack_require__(164)).state('site.404', __webpack_require__(166)).state('site.home', __webpack_require__(168)).state('site.blog', __webpack_require__(170)).state('site.blog.item', __webpack_require__(172))
 	    // .state('site.about', require('./components/templates/about/about-controller'))
-	    .state('site.contact', __webpack_require__(170));
+	    .state('site.contact', __webpack_require__(174));
 	    // .state('site.services', require('./components/templates/services/services-controller'))
 	    // .state('site.board-list', require('./components/templates/board/board-list-controller'))
 	    // .state('site.board-member', require('./components/templates/board/board-member-controller'))
@@ -67,7 +67,7 @@
 	        enabled: true,
 	        requireBase: false
 	    });
-	}]).directive('navFooter', __webpack_require__(172)).directive('navHeader', __webpack_require__(174));
+	}]).directive('navFooter', __webpack_require__(176)).directive('navHeader', __webpack_require__(178));
 
 /***/ }),
 /* 1 */
@@ -26656,15 +26656,398 @@
 /* 169 */
 /***/ (function(module, exports) {
 
-	module.exports = "<div id=\"homePage\">\n  <!--  Content  -->\n  <div id=\"page-wrapper\">\n\n    <!-- Header -->\n    <header id=\"header\" class=\"navbar-brand\">\n      <a href=\"/\"><img src=\"/img/CititBotLogo-Final.png\"></a>\n      <nav id=\"nav\">\n        <ul>\n          <li><a href=\"/\">Home</a></li>\n          <li>\n            <a href=\"#\" class=\"icon fa-angle-down\">Layouts</a>\n            <ul>\n              <li><a href=\"/generic\">Generic</a></li>\n              <li><a href=\"/contact\">Contact</a></li>\n              <!-- <li><a href=\"elements.html\">Elements</a></li> -->\n              <li>\n                <a href=\"#\">Submenu</a>\n                <ul>\n                  <li><a href=\"#\">Option One</a></li>\n                  <li><a href=\"#\">Option Two</a></li>\n                  <li><a href=\"#\">Option Three</a></li>\n                  <li><a href=\"#\">Option Four</a></li>\n                </ul>\n              </li>\n            </ul>\n          </li>\n          <li><a href=\"#\" class=\"button\">Sign Up</a></li>\n        </ul>\n      </nav>\n    </header>\n\n    <!-- Banner -->\n    <section id=\"banner\" class=\"video-container\">\n      <video src=\"Citibot.mp4\" autoplay loop muted playsinline></video>\n      <div class=\"callout\">\n        <!-- <h1 style=\"color:black;\">CITIBOT</h1> -->\n        <!-- <div style=\"color:black;\">CSS Background-Size: Cover for Inline Images &amp; Videos</div> -->\n      </div>\n    </section>\n\n    <!-- Main -->\n    <section id=\"main\" class=\"container\">\n      <section class=\"box special features\">\n        <div class=\"features-row\">\n          <section>\n            <span class=\"icon major fa-bolt accent2\"></span>\n            <h3>Magna etiam</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n          </section>\n          <section>\n            <span class=\"icon major fa-area-chart accent3\"></span>\n            <h3>Ipsum dolor</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n          </section>\n        </div>\n        <div class=\"features-row\">\n          <section>\n            <span class=\"icon major fa-cloud accent4\"></span>\n            <h3>Sed feugiat</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n          </section>\n          <section>\n            <span class=\"icon major fa-lock accent5\"></span>\n            <h3>Enim phasellus</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n          </section>\n        </div>\n      </section>\n\n      <div class=\"row\">\n        <div class=\"6u 12u(narrower)\">\n\n          <section class=\"box special\">\n            <span class=\"image featured\"><img src=\"images/pic02.jpg\" alt=\"\" /></span>\n            <h3>Sed lorem adipiscing</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n            <ul class=\"actions\">\n              <li><a href=\"#\" class=\"button alt\">Learn More</a></li>\n            </ul>\n          </section>\n\n        </div>\n        <div class=\"6u 12u(narrower)\">\n\n          <section class=\"box special\">\n            <span class=\"image featured\"><img src=\"images/pic03.jpg\" alt=\"\" /></span>\n            <h3>Accumsan integer</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n            <ul class=\"actions\">\n              <li><a href=\"#\" class=\"button alt\">Learn More</a></li>\n            </ul>\n          </section>\n\n        </div>\n      </div>\n\n    </section>\n\n    <!-- CTA -->\n    <section id=\"cta\">\n\n      <h2>Sign up for beta access</h2>\n      <p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>\n\n      <form>\n        <div class=\"row uniform 50%\">\n          <div class=\"8u 12u(mobilep)\">\n            <input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email Address\" />\n          </div>\n          <div class=\"4u 12u(mobilep)\">\n            <input type=\"submit\" value=\"Sign Up\" class=\"fit\" />\n          </div>\n        </div>\n      </form>\n\n    </section>\n    <!-- <article>\n    <h1>CitiBot</h1>\n  </article> -->\n\n    <!--  Video is muted & autoplays, placed after major DOM elements for performance & has an image fallback  -->\n    <!-- <video autoplay loop id=\"video-background\" muted plays-inline>\n    <source src=\"Citibot.mp4\" type=\"video/mp4\">\n  </video> -->\n  </div>\n"
+	module.exports = "<div id=\"homePage\">\n  <!--  Content  -->\n  <div id=\"page-wrapper\">\n\n    <!-- Header -->\n    <header id=\"header\" class=\"navbar-brand\">\n      <a href=\"/\"><img src=\"/img/CititBotLogo-Final.png\"></a>\n      <nav id=\"nav\">\n        <ul>\n          <li><a href=\"/\">Home</a></li>\n          <li><a href=\"/blog\">Blog</a></li>\n          <!-- <li>\n            <a href=\"#\" class=\"icon fa-angle-down\">Layouts</a>\n            <ul>\n              <li><a href=\"/generic\">Generic</a></li>\n              <li><a href=\"/contact\">Contact</a></li>\n              <li>\n                <a href=\"#\">Submenu</a>\n                <ul>\n                  <li><a href=\"#\">Option One</a></li>\n                  <li><a href=\"#\">Option Two</a></li>\n                  <li><a href=\"#\">Option Three</a></li>\n                  <li><a href=\"#\">Option Four</a></li>\n                </ul>\n              </li>\n            </ul>\n          </li> -->\n          <li><a href=\"#\" class=\"button\">Sign Up</a></li>\n        </ul>\n      </nav>\n    </header>\n\n    <!-- Banner -->\n    <section id=\"banner\" class=\"video-container\">\n      <video src=\"Citibot.mp4\" autoplay loop muted playsinline></video>\n      <div class=\"callout\">\n        <!-- <h1 style=\"color:black;\">CITIBOT</h1> -->\n        <!-- <div style=\"color:black;\">CSS Background-Size: Cover for Inline Images &amp; Videos</div> -->\n      </div>\n    </section>\n\n    <!-- Main -->\n    <section id=\"main\" class=\"container\">\n      <section class=\"box special features\">\n        <div class=\"features-row\">\n          <section>\n            <span class=\"icon major fa-bolt accent2\"></span>\n            <h3>Magna etiam</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n          </section>\n          <section>\n            <span class=\"icon major fa-area-chart accent3\"></span>\n            <h3>Ipsum dolor</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n          </section>\n        </div>\n        <div class=\"features-row\">\n          <section>\n            <span class=\"icon major fa-cloud accent4\"></span>\n            <h3>Sed feugiat</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n          </section>\n          <section>\n            <span class=\"icon major fa-lock accent5\"></span>\n            <h3>Enim phasellus</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n          </section>\n        </div>\n      </section>\n\n      <div class=\"row\">\n        <div class=\"6u 12u(narrower)\">\n\n          <section class=\"box special\">\n            <span class=\"image featured\"><img src=\"images/pic02.jpg\" alt=\"\" /></span>\n            <h3>Sed lorem adipiscing</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n            <ul class=\"actions\">\n              <li><a href=\"#\" class=\"button alt\">Learn More</a></li>\n            </ul>\n          </section>\n\n        </div>\n        <div class=\"6u 12u(narrower)\">\n\n          <section class=\"box special\">\n            <span class=\"image featured\"><img src=\"images/pic03.jpg\" alt=\"\" /></span>\n            <h3>Accumsan integer</h3>\n            <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>\n            <ul class=\"actions\">\n              <li><a href=\"#\" class=\"button alt\">Learn More</a></li>\n            </ul>\n          </section>\n\n        </div>\n      </div>\n\n    </section>\n\n    <!-- CTA -->\n    <section id=\"cta\">\n\n      <h2>Sign up for beta access</h2>\n      <p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>\n\n      <form>\n        <div class=\"row uniform 50%\">\n          <div class=\"8u 12u(mobilep)\">\n            <input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email Address\" />\n          </div>\n          <div class=\"4u 12u(mobilep)\">\n            <input type=\"submit\" value=\"Sign Up\" class=\"fit\" />\n          </div>\n        </div>\n      </form>\n\n    </section>\n    <!-- <article>\n    <h1>CitiBot</h1>\n  </article> -->\n\n    <!--  Video is muted & autoplays, placed after major DOM elements for performance & has an image fallback  -->\n    <!-- <video autoplay loop id=\"video-background\" muted plays-inline>\n    <source src=\"Citibot.mp4\" type=\"video/mp4\">\n  </video> -->\n  </div>\n"
 
 /***/ }),
 /* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = {
+	    url: '/blog',
+	    template: __webpack_require__(171),
+	    controller: BlogController,
+	    controllerAs: 'blogCtrl'
+	};
+	function BlogController(contentful, $stateParams, $scope, $location, Slug, CacheService) {
+	    var blogPosts = [];
+	
+	    // var feed = new Instafeed({
+	    //   get: 'user',
+	    //   userId: 4204910055, // Ex: 1374300081
+	    //   accessToken: '4204910055.7499d0e.098d029149fb456fb367af851bcecada',
+	    //   limit: 8
+	    // });
+	    // feed.run();
+	
+	    $scope.currentPage = 1;
+	    $scope.featuredPost = null;
+	
+	    $scope.isSelectedCategory = isSelectedCategory;
+	    $scope.submitSearch = submitSearch;
+	    $scope.goToPostDetail = goToPostDetail;
+	    $scope.nextPost = nextPost;
+	    $scope.prevPost = prevPost;
+	    $scope.nextPage = nextPage;
+	    $scope.prevPage = prevPage;
+	
+	    getBlogPosts();
+	
+	    function getBlogPosts() {
+	        console.log('getting posts');
+	        // Get all blog posts sorted by date
+	        var query = 'content_type=blogPost&order=fields.date';
+	        // Pass in optional query params
+	        console.log($stateParams);
+	        if ($stateParams.categoryId) query += '&fields.category.sys.id=' + $stateParams.categoryId;else if ($stateParams.tag) query += '&fields.tags[in]=' + $stateParams.tag;else if ($stateParams.query) query += '&query=' + $stateParams.query;
+	
+	        contentful.entries(query).then(function (response) {
+	            console.log(response);
+	            blogPosts = response.data.items;
+	            $scope.numberOfPosts = response.data.total;
+	
+	            // Search for featured post
+	            var featuredIndex = blogPosts.findIndex(isFeatured);
+	            // IF featured post in response
+	            if (featuredIndex > -1) {
+	                // Remove from posts array
+	                var featuredPost = blogPosts.splice(featuredIndex, 1)[0];
+	                // Mark for DOM styling
+	                featuredPost.firstFeatured = true;
+	                // Add to front of posts array
+	                blogPosts.unshift(featuredPost);
+	            }
+	            // Store posts in cache
+	            CacheService.put('blogPosts', blogPosts);
+	            // Set visible posts
+	            $scope.currentBlogPosts = blogPosts.slice(0, 4);
+	
+	            function isFeatured(post) {
+	                return post.fields.featured === true;
+	            }
+	        }, function (error) {
+	            console.log('Error getting blog posts from Contentful: ' + error);
+	        });
+	    }
+	
+	    // function getSeo() {
+	    //     contentful
+	    //         .entries('content_type=blogPageSeo')
+	    //         .then(function(response){
+	    //             var contentfulData = response.data.items[0];
+	    //             if(contentfulData.fields.seoTitle) {
+	    //                 document.title = contentfulData.fields.seoTitle;
+	    //             }
+	    //             if(contentfulData.fields.pageSpecificMetaDescriptionSeo) {
+	    //                 var meta = document.getElementsByTagName("meta");
+	    //                 for (var i = 0; i < meta.length; i++) {
+	    //                     if (meta[i].name.toLowerCase() === "description") {
+	    //                         meta[i].content=contentfulData.fields.pageSpecificMetaDescriptionSeo;
+	    //                     }
+	    //                 }
+	    //             }
+	    //         },
+	    //         function(error){
+	    //             console.log('Error getting blog seo from Contentful: ' + error);
+	    //         });
+	    // }
+	
+	
+	    $scope.post = {
+	        readMore: true
+	    };
+	    $scope.showReadMore = function (post) {
+	        post.readMore = !post.readMore;
+	    };
+	    $scope.hideReadMore = function (post) {
+	        post.readMore = !post.readMore;
+	    };
+	
+	    function isSelectedCategory(category) {
+	        return $location.path().startsWith('/blog/category/' + Slug.slugify(category));
+	    }
+	
+	    function goToPostDetail(post, index) {
+	        console.log('index in dom: ' + index);
+	        currentPostIndex = getPostIndex(index);
+	        console.log('index in allposts: ' + index);
+	        $location.path('/blog/' + Slug.slugify(post.fields.title) + '/' + post.sys.id);
+	    }
+	
+	    function prevPost() {
+	        var post = {};
+	        if (currentPostIndex === 0) {
+	            currentPostIndex = $scope.numberOfPosts - 1;
+	            post = blogPosts[currentPostIndex];
+	        } else {
+	            post = blogPosts[currentPostIndex - 1];
+	        }
+	        $location.path('/blog/' + Slug.slugify(post.fields.title) + '/' + post.sys.id);
+	    }
+	
+	    function nextPost() {
+	        var post = {};
+	        if (currentPostIndex == $scope.numberOfPosts - 1) {
+	            currentPostIndex = 0;
+	            post = blogPosts[currentPostIndex];
+	        } else {
+	            post = blogPosts[currentPostIndex + 1];
+	        }
+	        $location.path('/blog/' + Slug.slugify(post.fields.title) + '/' + post.sys.id);
+	    }
+	
+	    function submitSearch() {
+	        $location.path('blog/search/' + $scope.query);
+	    }
+	
+	    function nextPage() {
+	        var begin = $scope.currentPage * 4;
+	        var end = begin + 4;
+	        $scope.currentBlogPosts = blogPosts.slice(begin, end);
+	    }
+	
+	    function goToPage(pageNumber) {
+	        var begin = (pageNumber - 1) * 4;
+	        var end = begin + 4;
+	        $scope.currentBlogPosts = blogPosts.slice(begin, end);
+	    }
+	
+	    function prevPage() {
+	        var begin = ($scope.currentPage - 1) * 4;
+	        var end = begin + 4;
+	        $scope.currentBlogPosts = blogPosts.slice(begin, end);
+	    }
+	
+	    function getPostIndex(index) {
+	        return ($scope.currentPage - 1) * 4 + index;
+	    }
+	}
+
+/***/ }),
+/* 171 */
+/***/ (function(module, exports) {
+
+	module.exports = "<!-- <pre>\n    {{ blogPosts | json }}\n</pre> -->\n<div id=\"blogPage\">\n  <header id=\"header\" class=\"navbar-brand\">\n    <a href=\"/\"><img src=\"/img/CititBotLogo-Final.png\"></a>\n    <nav id=\"nav\">\n      <ul>\n        <li><a href=\"/\">Home</a></li>\n        <li><a href=\"/blog\">Blog</a></li>\n        <li><a href=\"#\" class=\"button\">Sign Up</a></li>\n      </ul>\n    </nav>\n  </header>\n    <section id=\"blog\" class=\"container\">\n\n        <div class=\"blog\">\n            <div class=\"row\">\n                <div class=\"col-md-8\">\n                    <div class=\"no-results\" ng-show=\"numberOfPosts === 0\">\n                      <div class=\"row text-center\">\n                          <h2>No results found</h2>\n                      </div>\n                    </div>\n\n                    <div class=\"blog-item\" ng-repeat=\"post in currentBlogPosts\" >\n                        <div class=\"row\" >\n                          <div ng-if=\"post.firstFeatured\" class=\"col-xs-12 col-sm-10 blog-content blog-featured\">\n                              <a data-ui-sref=\"blog.detail({slug: post.fields.slug})\"><img class=\"img-responsive img-blog\" ng-src=\"{{ post.fields.image.fields.file.url }}\" width=\"100%\" alt=\"{{ post.fields.image.fields.description }}\" /></a>\n                              <h2><a  class=\"featuredBlogTitle\" data-ui-sref=\"blog.detail({slug: post.fields.slug})\">{{ post.fields.title }} </a></h2>\n                              <h3><b>{{ post.fields.date }}</b> | {{ post.fields.body | limitTo: 150 }}</h3>\n                              <a class=\"btn btn-primary readmore\" data-ui-sref=\"site.blog.item({slug: post.fields.slug})\">Read More</a>\n                          </div>\n\n\n\n                            <div ng-if=\"!post.firstFeatured\" class=\"col-sm-10 blog-content blogPreview\" ng-init=\"post.readMore === true\" data-ng-mouseleave=\"hideReadMore(post);\"; data-ng-mouseenter=\"showReadMore(post);\">\n                              <div class=\"\">\n\n\n                                <a data-ui-sref=\"blog.detail({slug: post.fields.slug})\">\n                                  <img class=\"img-responsive img-blog\" ng-src=\"{{ post.fields.image.fields.file.url }}\" width=\"100%\" alt=\"{{ post.fields.image.fields.description }}\"  />\n                                      <div class=\"blogOverlay\" ng-style=\"{'opacity': post.readMore === true ? 0 : 1}\">\n                                      <h2>{{ post.fields.title }}</h2>\n                                  </div>\n                                </a>\n\n                              </div>\n                                <div class=\"newOverlay\" ng-style=\"{'opacity': post.readMore === true ? 1 : 0}\">\n                                    <h2>{{ post.fields.title }}</h2>\n                                    <h3>{{post.fields.date}}</h3>\n                                    <a class=\"btn btn-primary readmore\" data-ui-sref=\"blog.detail({slug: post.fields.slug})\">Read More</a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!--/.blog-item-->\n\n\n\n\n                  <div class=\"flyout hidden\">&nbsp;</div>\n                    <ul class=\"pagination2\" ng-show=\"pages > 1\">\n                        <a ng-show=\"currentPage > 1\" ng-click=\"prevPage()\"><i class=\"fa fa-chevron-left\" style=\"color:#000;     font-size: 100%;\"></i></a>\n                        <li ng-class=\"{ 'activeBlogPagination': currentPage === $index + 1}\" ng-repeat=\"page in pages\">\n                            <a href=\"#\" ></a>\n                        </li>\n                        <a ng-show=\"currentPage < pages\"><i class=\"fa fa-chevron-right\" style=\"color:#000;     font-size: 100%;\"></i></a>\n                    </ul>\n                </div>\n                <!--/.col-md-8-->\n\n                <aside class=\"col-md-4\">\n\n                    <div class=\"widget categories\">\n                        <h3>Categories</h3>\n                        <div class=\"row\">\n                            <div class=\"col-sm-6\">\n                                <ul class=\"blog_category\" contentful-entries=\"'content_type=blogCategory'\">\n                                    <li ng-repeat=\"category in $contentfulEntries.items | orderBy:'fields.orderNumber'\">\n                                        <a ng-class=\"{ 'selected': isSelectedCategory(category.fields.title) }\" ng-href=\"#blog/category/{{ category.fields.title | slugify }}/{{ category.sys.id }}\">{{ category.fields.title }}</a>\n                                    </li>\n                                </ul>\n                            </div>\n                        </div>\n                    </div>\n                    <!--/.categories-->\n\n                    <div class=\"widget search\">\n                        <form role=\"form\" ng-submit=\"submitSearch()\">\n                            <input type=\"text\" class=\"form-control search_box\" autocomplete=\"off\" placeholder=\"Search\" ng-model=\"query\">\n                        </form>\n                    </div>\n                    <!--/.search-->\n\n                    <div class=\"widget instagram\">\n                        <h3>Follow us on Instagram</h3>\n                        <div class=\"row\">\n                            <div class=\"col-sm-6 instagramLink\" contentful-entry=\"'sys.id=pItPlrIffMIeUym6E8Eem'\">\n                                <i class=\"fa\" ng-class=\"$contentfulEntry.fields.fontAwesomeIcon\"> <a target=\"_blank\" ng-href=\"{{ $contentfulEntry.fields.socialLink }}\">@sweetgrassconstruction</a></i>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div id=\"instafeed\"></div>\n\n                </aside>\n            </div>\n            <!--/.row-->\n        </div>\n    </section>\n    <!--/#blog-->\n</div>\n\n    <!--/#contact-info-->\n"
+
+/***/ }),
+/* 172 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    url: '/:slug',
+	    template: __webpack_require__(173),
+	    controller: BlogItemController,
+	    controllerAs: 'blogItemCtrl'
+	};
+	function BlogItemController(contentful, $stateParams, $scope, $location, Slug, CacheService, $window, $state) {
+	    $window.scrollTo(0, 0);
+	    var cachedPosts = CacheService.get('blogPosts');
+	    var blogPosts;
+	    if (cachedPosts) {
+	        blogPosts = cachedPosts;
+	        organizePosts(blogPosts);
+	    } else {
+	        // If no cached posts, preload for indexing (external origin)
+	        getBlogPosts();
+	    }
+	    function getBlogPosts() {
+	        contentful.entries('content_type=blogPost&order=fields.date').then(function (response) {
+	            blogPosts = response.data.items;
+	            console.log(blogPosts);
+	            CacheService.put('blogPosts', blogPosts);
+	            organizePosts(blogPosts);
+	        }, function (error) {
+	            console.log('Error getting blog posts from Contentful: ' + error);
+	        });
+	    }
+	    function organizePosts(posts) {
+	        for (var i = 0; i < posts.length; i++) {
+	            if (posts[i].fields.slug === $stateParams.slug) {
+	                $scope.currentBlogPost = posts[i];
+	                if ($scope.currentBlogPost.fields.seoTitle) {
+	                    document.title = $scope.currentBlogPost.fields.seoTitle;
+	                }
+	                if ($scope.currentBlogPost.fields.pageSpecificMetaDescriptionSeo) {
+	                    var meta = document.getElementsByTagName("meta");
+	                    for (var i = 0; i < meta.length; i++) {
+	                        if (meta[i].name.toLowerCase() === "description") {
+	                            meta[i].content = $scope.currentBlogPost.fields.pageSpecificMetaDescriptionSeo;
+	                        }
+	                    }
+	                }
+	                if (i == 0) {
+	                    var prevNum = posts.length - 1;
+	                    $scope.prevPost = posts[prevNum];
+	                    $scope.nextPost = posts[1];
+	                } else if (i == posts.length - 1) {
+	                    var prevNum = i - 1;
+	                    $scope.nextPost = posts[0];
+	                    $scope.prevPost = posts[prevNum];
+	                } else {
+	                    var nextNum = i + 1;
+	                    var prevNum = i - 1;
+	                    $scope.prevPost = posts[prevNum];
+	                    $scope.nextPost = posts[nextNum];
+	                }
+	            }
+	        }
+	    }
+	    $scope.selectPhoto = function (photo, $index) {
+	        $scope.currentIndex = $index;
+	        console.log($scope.currentIndex);
+	        $scope.selectedProjectImage = photo;
+	    };
+	
+	    ///Social Sharing tbd on if count works
+	    $(function () {
+	        var knownButtons = ['twitter', 'facebook'];
+	
+	        $.fn.sharify = function (options) {
+	            var settings = $.extend({
+	                buttons: knownButtons.slice(),
+	                url: document.location.origin + document.location.pathname,
+	                media: null,
+	                counter: false,
+	                className: ''
+	            }, options);
+	
+	            settings.buttons.contains = function (item) {
+	                return this.indexOf(item) > -1;
+	            };
+	
+	            if (settings.counter && settings.counter !== 'none' && settings.counter !== 'bottom') {
+	                settings.counter = 'top';
+	            } else if (!settings.counter) {
+	                settings.counter = 'none';
+	            }
+	
+	            return this.each(function () {
+	                var $share = $('<div/>', {
+	                    class: $.trim(['share', 'counter-' + settings.counter, settings.className].join(' '), settings.className)
+	                });
+	                $.each(settings.buttons, function (index, name) {
+	                    if (knownButtons.indexOf(name) > -1) {
+	                        $share.append(createButton(name, settings));
+	                    }
+	                });
+	
+	                enableShareClick($share, settings);
+	                if (settings.counter !== 'none') {
+	                    setShareCount($share, settings);
+	                }
+	                $(this).append($share);
+	            });
+	        };
+	
+	        function createButton(name, settings) {
+	            var $button = $('<div/>', {
+	                'class': ['button', name].join(' ')
+	            });
+	            switch (settings.counter) {
+	                case 'top':
+	                    $button.append($('<div/>', {
+	                        'class': 'counter'
+	                    })).append($('<a/>', {
+	                        'href': '#'
+	                    }).append($('<i/>', {
+	                        class: 'fa fa-' + name
+	                    })));
+	                    break;
+	                case 'bottom':
+	                    $button.append($('<a/>', {
+	                        'href': '#'
+	                    }).append($('<i/>', {
+	                        class: 'fa fa-' + name
+	                    }))).append($('<div/>', {
+	                        'class': 'counter'
+	                    }));
+	                    break;
+	                case 'none':
+	                    $button.append($('<a/>', {
+	                        'href': '#'
+	                    }).append($('<i/>', {
+	                        class: 'fa fa-' + name
+	                    })));
+	                    break;
+	            }
+	            return $button;
+	        }
+	
+	        function enableShareClick($share, settings) {
+	            function openShareWindow(e) {
+	                window.open(e.href, 'mywin', 'left=20,top=20,width=500,height=400,toolbar=1,resizable=0');
+	                return false;
+	            }
+	
+	            var buttons = settings.buttons;
+	            if (buttons.contains('twitter')) {
+	                $share.find(".twitter a").attr("href", "//twitter.com/intent/tweet?text=" + document.title + "&url=" + settings.url).on("click", function () {
+	                    return openShareWindow(this);
+	                });
+	            }
+	            if (buttons.contains('facebook')) {
+	                $share.find(".facebook a").attr("href", "//www.facebook.com/sharer/sharer.php?u=" + settings.url).on("click", function () {
+	                    return openShareWindow(this);
+	                });
+	            }
+	        }
+	
+	        function setShareCount($share, settings) {
+	            var buttons = settings.buttons;
+	            if (buttons.contains('twitter')) {
+	                $.getJSON("http://urls.api.twitter.com/1/urls/count.json?url=" + settings.url + "&callback=?", function (json) {
+	                    $share.find(".twitter .counter").text(formatCount(json.count));
+	                });
+	            }
+	            if (buttons.contains('facebook')) {
+	                $.getJSON("http://graph.facebook.com/" + settings.url, function (json) {
+	                    $(".facebook .counter").text(formatCount(json.shares));
+	                });
+	            }
+	
+	            function formatCount(num) {
+	                num = num || 0;
+	                if (num >= 1000000000) {
+	                    return (num / 1000000000).toFixed(1) + 'G';
+	                }
+	                if (num >= 1000000) {
+	                    return (num / 1000000).toFixed(1) + 'M';
+	                }
+	                if (num >= 1000) {
+	                    return (num / 1000).toFixed(1) + 'K';
+	                }
+	                return num;
+	            }
+	        };
+	    });
+	
+	    $(function () {
+	        var buttons = ['twitter', 'facebook'];
+	
+	        $('.example.hidden-counter').sharify({
+	            buttons: buttons
+	        });
+	
+	        $('.example.image').sharify({
+	            buttons: buttons,
+	            className: 'image',
+	            media: $('.example.image img').attr('src')
+	        });
+	    });
+	}
+
+/***/ }),
+/* 173 */
+/***/ (function(module, exports) {
+
+	module.exports = "\n<!--/header-->\n<div id=\"blogItemPage\">\n<div class=\"spacer\">\n\n</div>\n<section id=\"blog\" class=\"container\">\n    <div class=\"blog\">\n        <div class=\"row\">\n            <div class=\"col-md-8\">\n                <div class=\"blog-item\">\n                    <h5><a ui-sref=\"blog\" class=\"blogLink\"> < Back to blog</a></h5>\n                    <h2 class=\"singleBlogTitle\">{{ currentBlogPost.fields.title }}</h2>\n                    <img class=\"img-responsive img-blog\" ng-src=\"{{ currentBlogPost.fields.image.fields.file.url }}\" width=\"100%\" alt=\"{{ currentBlogPost.fields.image.fields.description }}\" style=\"height: 300px;\" alt=\"currentBlogPost.fields.image.fields.file.description\"/>\n                    <div class=\"row\">\n                        <div class=\"col-xs-12 col-sm-10 single-blog-content\">\n                            <p style=\"margin-top: 2%;\"><b>{{ currentBlogPost.fields.date }}</b>| <span btf-markdown=\"currentBlogPost.fields.body\"></span></p>\n\n                            <div class=\"post-tags\">\n                                <strong><i>Tags</i></strong> | <a href=\"#blog/tag/{{ tag }}\" class=\"blogLink tagLink\" ng-repeat=\"tag in currentBlogPost.fields.tags\">{{ tag }}</a>\n                            </div>\n\n                        </div>\n                    </div>\n                </div>\n                <!--/.blog-item-->\n\n                <!--/#contact-page-->\n            </div>\n            <!--/.col-md-8-->\n\n            <aside class=\"col-md-4\">\n\n              <div class=\"widget categories\">\n                  <h3>Categories</h3>\n                  <div class=\"row\">\n                      <div class=\"col-sm-6\">\n                          <ul class=\"blog_category\" contentful-entries=\"'content_type=blogCategory'\">\n                              <li ng-repeat=\"category in $contentfulEntries.items | orderBy:'fields.orderNumber'\">\n                                  <a ng-class=\"{ 'selected': isSelectedCategory(category.fields.title) }\" ng-href=\"#blog/category/{{ category.fields.title | slugify }}/{{ category.sys.id }}\">{{ category.fields.title }}</a>\n                              </li>\n                          </ul>\n                      </div>\n                  </div>\n              </div>\n                <!--/.categories-->\n\n                <div class=\"widget search\">\n                    <form role=\"form\">\n                        <input type=\"text\" class=\"form-control search_box\" autocomplete=\"off\" placeholder=\"Search\">\n                    </form>\n                </div>\n                <!--/.search-->\n\n\n            </aside>\n\n        </div>\n        <!--/.row-->\n        <div class=\"extraBlogPhotos\">\n            <img src=\"{{currentBlogPost.fields.gallery[0].fields.file.url}}\" alt=\"{{currentBlogPost.fields.gallery[0].fields.description}}\" ng-click=\"selectPhoto(photo, $index)\" data-toggle=\"modal\" data-target=\"#gallery-modal\"/>\n            <img src=\"{{currentBlogPost.fields.gallery[1].fields.file.url}}\" alt=\"{{currentBlogPost.fields.gallery[1].fields.description}}\" ng-click=\"selectPhoto(photo, $index)\" data-toggle=\"modal\" data-target=\"#gallery-modal2\"/>\n            <br>\n            <br>\n            <div class=\"post\">\n              <div class=\"example hidden-counter\" >Share</div>\n            </div>\n        </div>\n\n\n\n\n\n        <div class=\"pagination\">\n            <a class=\"previous\" data-ui-sref=\"site.blog.item({slug: prevPost.fields.slug})\">\n                <h5> <i class=\"fa fa-chevron-left\" style=\"color: #000; font-size: 100%;\"></i>Previous </h5>\n            </a>\n            <a class=\"next\" data-ui-sref=\"site.blog.item({slug: nextPost.fields.slug})\">\n                <h5>Next <i class=\"fa fa-chevron-right\" style=\"color: #000; font-size: 100%;\"></i></h5>\n            </a>\n        </div>\n        <!-- MODAL -->\n        <div class=\"modal fade\" id=\"gallery-modal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"galleryModal\">\n          <div class=\"modal-dialog\" role=\"document\">\n            <div class=\"modal-content\">\n              <div class=\"modal-body bg-lt\">\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span class=\"glyphicon glyphicon-remove-circle\" aria-hidden=\"true\"></span></button>\n\n                <!-- <span ng-click=\"prevPhoto()\" class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\n                <span ng-click=\"nextPhoto()\" class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span> -->\n                <div class=\"pos-r\">\n                  <img class=\"img-responsive\" ng-src=\"{{currentBlogPost.fields.gallery[0].fields.file.url}}\" alt=\"\" />\n                </div>\n                <div class=\"post\" style=\"float: right; font-size: 20px; margin-top: 1%;\">\n                  <div class=\"example hidden-counter\" ></div>\n                </div>\n              </div>\n              <div ng-if=\"selectedProjectImage.fields.description\" class=\"modal-footer row\">\n                <div class=\"col-md-12\" btf-markdown=\"selectedProjectImage.fields.description\">\n                </div>\n              </div>\n\n            </div>\n          </div>\n        </div>\n        <div class=\"modal fade\" id=\"gallery-modal2\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"galleryModal\">\n          <div class=\"modal-dialog\" role=\"document\">\n            <div class=\"modal-content\">\n              <div class=\"modal-body bg-lt\">\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span class=\"glyphicon glyphicon-remove-circle\" aria-hidden=\"true\"></span></button>\n<!--\n                <span ng-click=\"prevPhoto()\" class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\n                <span ng-click=\"nextPhoto()\" class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span> -->\n                <div class=\"pos-r\">\n                  <img class=\"img-responsive\" ng-src=\"{{currentBlogPost.fields.gallery[1].fields.file.url}}\" alt=\"\" />\n                </div>\n                <div class=\"post\" style=\"float: right; font-size: 20px; margin-top: 1%;\">\n                  <div class=\"example hidden-counter\" ></div>\n                </div>\n              </div>\n              <div ng-if=\"selectedProjectImage.fields.description\" class=\"modal-footer row\">\n                <div class=\"col-md-12\" btf-markdown=\"selectedProjectImage.fields.description\">\n                </div>\n              </div>\n\n            </div>\n          </div>\n        </div>\n        <!-- END MODAL DIALOG -->\n\n\n    </div>\n    <!--/.blog-->\n\n</section>\n<!--/#blog-->\n</div>\n"
+
+/***/ }),
+/* 174 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = {
 		url: '/contact',
-		template: __webpack_require__(171),
+		template: __webpack_require__(175),
 		controller: ContactController,
 		controllerAs: 'contactCtrl'
 	};
@@ -26761,20 +27144,20 @@
 	}
 
 /***/ }),
-/* 171 */
+/* 175 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div id=\"contactPage\">\n  <div id=\"page-wrapper\">\n  <!-- Header -->\n  <header id=\"header\" class=\"navbar-brand\">\n    <a href=\"/\"><img src=\"/img/CititBotLogo-Final.png\"></a>\n    <nav id=\"nav\">\n      <ul>\n        <li><a href=\"/\">Home</a></li>\n        <li>\n          <a href=\"#\" class=\"icon fa-angle-down\">Layouts</a>\n          <ul>\n            <li><a href=\"/generic\">Generic</a></li>\n            <li><a href=\"/contact\">Contact</a></li>\n            <!-- <li><a href=\"elements.html\">Elements</a></li> -->\n            <li>\n              <a href=\"#\">Submenu</a>\n              <ul>\n                <li><a href=\"#\">Option One</a></li>\n                <li><a href=\"#\">Option Two</a></li>\n                <li><a href=\"#\">Option Three</a></li>\n                <li><a href=\"#\">Option Four</a></li>\n              </ul>\n            </li>\n          </ul>\n        </li>\n        <li><a href=\"#\" class=\"button\">Sign Up</a></li>\n      </ul>\n    </nav>\n  </header>\n  <section class=\"container\">\n    <div class=\"col-sm-12 box\" style=\"text-align:center; padding-top:6em;\">\n  <h2><strong>Contact Us</strong></h2>\n</div>\n</section>\n\n  <br/>\n  <section class=\"container\">\n    <form id=\"contact-form\" class=\"contact-form\" cf-form>\n       <div class=\"container\">\n         <div class=\"row\">\n           <div class=\"col-sm-12\">\n             <input type=\"name\" class=\"form-control\" placeholder=\"Name (required)\">\n           </div>\n           <div class=\"col-sm-12\">\n             <input type=\"email\" class=\"form-control\" placeholder=\"E-Mail (required)\">\n           </div>\n           <div class=\"col-sm-12\">\n             <input type=\"subject\" class=\"form-control\" placeholder=\"Subject (optional)\">\n           </div>\n         </div>\n         <br/>\n         <div class=\"row\">\n           <div class=\"col-sm-12\"><textarea rows=\"3\" style=\"max-height:8em;\"class=\"form-control\" id=\"message\" placeholder=\"Message (required)\"></textarea></div>\n         </div>\n         <br/>\n         <div class=\"col-sm-12\"  style=\"text-align:center;\">\n          <div class=\"btn btn-default\">Send Message</div>\n        </div>\n       </div>\n       </form>\n          <!-- <div class=\"emailConfirmationLayer\" data-ng-show=\"contactCtrl.showConfirmationLayer\">\n            <h2 class=\"tk-clarendon-wide\">SUCCESS!</h2>\n            <p class=\"futuraHeavy text-uppercase\">Thanks for your interest!</p>\n            <p>Return to our\n              <a href=\"/\">homepage.</a>\n            </p>\n          </div> -->\n          <!-- <div class=\"emailConfirmationLayer\" data-ng-show=\"contactCtrl.showErrorLayer\">\n            <h2 class=\"tk-clarendon-wide\">WE'RE SORRY!</h2>\n            <p class=\"futuraHeavy text-uppercase\">An error occurred while trying to deliver your message through the website.</p>\n            <p>Return to our\n              <a href=\"/\">homepage.</a>\n            </p>\n          </div> -->\n          <!-- <section>\n          <div id='map'></div>\n        </section> -->\n      </section>\n    </div>\n</div>\n"
 
 /***/ }),
-/* 172 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = function () {
 	    return {
 	        restrict: 'EA',
 	        replace: true,
-	        template: __webpack_require__(173),
+	        template: __webpack_require__(177),
 	        controller: controller
 	    };
 	};
@@ -26790,20 +27173,20 @@
 	}
 
 /***/ }),
-/* 173 */
+/* 177 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div id=\"footer\">\n</div>\n"
 
 /***/ }),
-/* 174 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = function () {
 	    return {
 	        restrict: 'EA',
 	        replace: true,
-	        template: __webpack_require__(175),
+	        template: __webpack_require__(179),
 	        controller: controller
 	    };
 	};
@@ -26815,7 +27198,7 @@
 	}
 
 /***/ }),
-/* 175 */
+/* 179 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div id=\"header\">\n  <div class=\"bloc bgc-white l-bloc\" style=\"position: fixed;z-index: 25;top: 0; left:0; right:20;\" id=\"bloc-0\">\n\n    <div class=\"container bloc-sm\">\n      <nav class=\"navbar row\">\n        <div class=\"navbar-header\">\n          <a class=\"navbar-brand\" href=\"\"><img class=\"logo\"src=\"img/CititBotLogo-Final.png\" alt=\"logo\" width=\"300\" /></a>\n          <button id=\"nav-toggle\" type=\"button\" class=\"ui-navbar-toggle navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-1\">\n          <span class=\"sr-only\">Toggle navigation</span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span>\n        </button>\n        </div>\n        <div class=\"collapse navbar-collapse navbar-1\" style=\"margin-right:20px;\">\n          <ul class=\"site-navigation nav navbar-nav \">\n            <li>\n              <a href=\"#demovid\">Demo</a>\n            </li>\n            <li>\n              <a href=\"#features\">Features</a>\n            </li>\n            <li>\n              <a href=\"#value\">Value</a>\n            </li>\n            <li>\n              <a href=\"#contact\">Contact</a>\n            </li>\n          </ul>\n        </div>\n      </nav>\n    </div>\n  </div>\n</div>\n"

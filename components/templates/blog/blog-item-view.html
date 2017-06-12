@@ -1,0 +1,137 @@
+
+<!--/header-->
+<div id="blogItemPage">
+<div class="spacer">
+
+</div>
+<section id="blog" class="container">
+    <div class="blog">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="blog-item">
+                    <h5><a ui-sref="blog" class="blogLink"> < Back to blog</a></h5>
+                    <h2 class="singleBlogTitle">{{ currentBlogPost.fields.title }}</h2>
+                    <img class="img-responsive img-blog" ng-src="{{ currentBlogPost.fields.image.fields.file.url }}" width="100%" alt="{{ currentBlogPost.fields.image.fields.description }}" style="height: 300px;" alt="currentBlogPost.fields.image.fields.file.description"/>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-10 single-blog-content">
+                            <p style="margin-top: 2%;"><b>{{ currentBlogPost.fields.date }}</b>| <span btf-markdown="currentBlogPost.fields.body"></span></p>
+
+                            <div class="post-tags">
+                                <strong><i>Tags</i></strong> | <a href="#blog/tag/{{ tag }}" class="blogLink tagLink" ng-repeat="tag in currentBlogPost.fields.tags">{{ tag }}</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--/.blog-item-->
+
+                <!--/#contact-page-->
+            </div>
+            <!--/.col-md-8-->
+
+            <aside class="col-md-4">
+
+              <div class="widget categories">
+                  <h3>Categories</h3>
+                  <div class="row">
+                      <div class="col-sm-6">
+                          <ul class="blog_category" contentful-entries="'content_type=blogCategory'">
+                              <li ng-repeat="category in $contentfulEntries.items | orderBy:'fields.orderNumber'">
+                                  <a ng-class="{ 'selected': isSelectedCategory(category.fields.title) }" ng-href="#blog/category/{{ category.fields.title | slugify }}/{{ category.sys.id }}">{{ category.fields.title }}</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+                <!--/.categories-->
+
+                <div class="widget search">
+                    <form role="form">
+                        <input type="text" class="form-control search_box" autocomplete="off" placeholder="Search">
+                    </form>
+                </div>
+                <!--/.search-->
+
+
+            </aside>
+
+        </div>
+        <!--/.row-->
+        <div class="extraBlogPhotos">
+            <img src="{{currentBlogPost.fields.gallery[0].fields.file.url}}" alt="{{currentBlogPost.fields.gallery[0].fields.description}}" ng-click="selectPhoto(photo, $index)" data-toggle="modal" data-target="#gallery-modal"/>
+            <img src="{{currentBlogPost.fields.gallery[1].fields.file.url}}" alt="{{currentBlogPost.fields.gallery[1].fields.description}}" ng-click="selectPhoto(photo, $index)" data-toggle="modal" data-target="#gallery-modal2"/>
+            <br>
+            <br>
+            <div class="post">
+              <div class="example hidden-counter" >Share</div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="pagination">
+            <a class="previous" data-ui-sref="site.blog.item({slug: prevPost.fields.slug})">
+                <h5> <i class="fa fa-chevron-left" style="color: #000; font-size: 100%;"></i>Previous </h5>
+            </a>
+            <a class="next" data-ui-sref="site.blog.item({slug: nextPost.fields.slug})">
+                <h5>Next <i class="fa fa-chevron-right" style="color: #000; font-size: 100%;"></i></h5>
+            </a>
+        </div>
+        <!-- MODAL -->
+        <div class="modal fade" id="gallery-modal" tabindex="-1" role="dialog" aria-labelledby="galleryModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body bg-lt">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
+
+                <!-- <span ng-click="prevPhoto()" class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span ng-click="nextPhoto()" class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> -->
+                <div class="pos-r">
+                  <img class="img-responsive" ng-src="{{currentBlogPost.fields.gallery[0].fields.file.url}}" alt="" />
+                </div>
+                <div class="post" style="float: right; font-size: 20px; margin-top: 1%;">
+                  <div class="example hidden-counter" ></div>
+                </div>
+              </div>
+              <div ng-if="selectedProjectImage.fields.description" class="modal-footer row">
+                <div class="col-md-12" btf-markdown="selectedProjectImage.fields.description">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="gallery-modal2" tabindex="-1" role="dialog" aria-labelledby="galleryModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body bg-lt">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
+<!--
+                <span ng-click="prevPhoto()" class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span ng-click="nextPhoto()" class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> -->
+                <div class="pos-r">
+                  <img class="img-responsive" ng-src="{{currentBlogPost.fields.gallery[1].fields.file.url}}" alt="" />
+                </div>
+                <div class="post" style="float: right; font-size: 20px; margin-top: 1%;">
+                  <div class="example hidden-counter" ></div>
+                </div>
+              </div>
+              <div ng-if="selectedProjectImage.fields.description" class="modal-footer row">
+                <div class="col-md-12" btf-markdown="selectedProjectImage.fields.description">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- END MODAL DIALOG -->
+
+
+    </div>
+    <!--/.blog-->
+
+</section>
+<!--/#blog-->
+</div>

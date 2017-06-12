@@ -1,0 +1,115 @@
+<!-- <pre>
+    {{ blogPosts | json }}
+</pre> -->
+<div id="blogPage">
+  <header id="header" class="navbar-brand">
+    <a href="/"><img src="/img/CititBotLogo-Final.png"></a>
+    <nav id="nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="#" class="button">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+    <section id="blog" class="container">
+
+        <div class="blog">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="no-results" ng-show="numberOfPosts === 0">
+                      <div class="row text-center">
+                          <h2>No results found</h2>
+                      </div>
+                    </div>
+
+                    <div class="blog-item" ng-repeat="post in currentBlogPosts" >
+                        <div class="row" >
+                          <div ng-if="post.firstFeatured" class="col-xs-12 col-sm-10 blog-content blog-featured">
+                              <a data-ui-sref="blog.detail({slug: post.fields.slug})"><img class="img-responsive img-blog" ng-src="{{ post.fields.image.fields.file.url }}" width="100%" alt="{{ post.fields.image.fields.description }}" /></a>
+                              <h2><a  class="featuredBlogTitle" data-ui-sref="blog.detail({slug: post.fields.slug})">{{ post.fields.title }} </a></h2>
+                              <h3><b>{{ post.fields.date }}</b> | {{ post.fields.body | limitTo: 150 }}</h3>
+                              <a class="btn btn-primary readmore" data-ui-sref="site.blog.item({slug: post.fields.slug})">Read More</a>
+                          </div>
+
+
+
+                            <div ng-if="!post.firstFeatured" class="col-sm-10 blog-content blogPreview" ng-init="post.readMore === true" data-ng-mouseleave="hideReadMore(post);"; data-ng-mouseenter="showReadMore(post);">
+                              <div class="">
+
+
+                                <a data-ui-sref="blog.detail({slug: post.fields.slug})">
+                                  <img class="img-responsive img-blog" ng-src="{{ post.fields.image.fields.file.url }}" width="100%" alt="{{ post.fields.image.fields.description }}"  />
+                                      <div class="blogOverlay" ng-style="{'opacity': post.readMore === true ? 0 : 1}">
+                                      <h2>{{ post.fields.title }}</h2>
+                                  </div>
+                                </a>
+
+                              </div>
+                                <div class="newOverlay" ng-style="{'opacity': post.readMore === true ? 1 : 0}">
+                                    <h2>{{ post.fields.title }}</h2>
+                                    <h3>{{post.fields.date}}</h3>
+                                    <a class="btn btn-primary readmore" data-ui-sref="blog.detail({slug: post.fields.slug})">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.blog-item-->
+
+
+
+
+                  <div class="flyout hidden">&nbsp;</div>
+                    <ul class="pagination2" ng-show="pages > 1">
+                        <a ng-show="currentPage > 1" ng-click="prevPage()"><i class="fa fa-chevron-left" style="color:#000;     font-size: 100%;"></i></a>
+                        <li ng-class="{ 'activeBlogPagination': currentPage === $index + 1}" ng-repeat="page in pages">
+                            <a href="#" ></a>
+                        </li>
+                        <a ng-show="currentPage < pages"><i class="fa fa-chevron-right" style="color:#000;     font-size: 100%;"></i></a>
+                    </ul>
+                </div>
+                <!--/.col-md-8-->
+
+                <aside class="col-md-4">
+
+                    <div class="widget categories">
+                        <h3>Categories</h3>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="blog_category" contentful-entries="'content_type=blogCategory'">
+                                    <li ng-repeat="category in $contentfulEntries.items | orderBy:'fields.orderNumber'">
+                                        <a ng-class="{ 'selected': isSelectedCategory(category.fields.title) }" ng-href="#blog/category/{{ category.fields.title | slugify }}/{{ category.sys.id }}">{{ category.fields.title }}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.categories-->
+
+                    <div class="widget search">
+                        <form role="form" ng-submit="submitSearch()">
+                            <input type="text" class="form-control search_box" autocomplete="off" placeholder="Search" ng-model="query">
+                        </form>
+                    </div>
+                    <!--/.search-->
+
+                    <div class="widget instagram">
+                        <h3>Follow us on Instagram</h3>
+                        <div class="row">
+                            <div class="col-sm-6 instagramLink" contentful-entry="'sys.id=pItPlrIffMIeUym6E8Eem'">
+                                <i class="fa" ng-class="$contentfulEntry.fields.fontAwesomeIcon"> <a target="_blank" ng-href="{{ $contentfulEntry.fields.socialLink }}">@sweetgrassconstruction</a></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="instafeed"></div>
+
+                </aside>
+            </div>
+            <!--/.row-->
+        </div>
+    </section>
+    <!--/#blog-->
+</div>
+
+    <!--/#contact-info-->

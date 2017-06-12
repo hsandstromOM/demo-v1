@@ -7,7 +7,7 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const WebpackErrorNotificationPlugin = require('webpack-error-notification');
 
 // The output path for all "built" files
-const outputPath = path.join(__dirname, '/www', '[hash]');
+const outputPath = path.join(__dirname, '/www');
 const nodeModulePath = path.join(__dirname, 'node_modules');
 
 // Webpack config
@@ -18,9 +18,8 @@ module.exports = {
     },
     output: {
         path: outputPath,
-        publicPath: 'www/[hash]',
-        filename: '[name].[hash].bundle.js',
-        chunkFilename: '[id].[hash].bundle.js'
+        publicPath: 'www',
+        filename: '[name].bundle.js'
     },
     devtool: 'source-map',
     module: {
