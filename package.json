@@ -61,7 +61,7 @@
     "nodemailer-sendgrid-transport": "^0.2.0",
     "palmettoflow-event": "^1.1.2",
     "palmettoflow-nodejs": "^1.0.1",
-    "pouchdb": "^5.0.0",
+    "pouchdb": "^6.3.0",
     "prerender-node": "^2.5.0",
     "progress-bar-webpack-plugin": "^1.9.0",
     "raw-loader": "^0.5.1",
@@ -74,7 +74,8 @@
     "underscore": "^1.8.3",
     "webpack": "^1.13.2",
     "webpack-error-notification": "^0.1.6",
-    "xhr": "^2.1.0"
+    "xhr": "^2.1.0",
+    "snyk": "^1.85.0"
   },
   "devDependencies": {
     "eslint": "^3.8.1",
@@ -92,7 +93,9 @@
     "start": "node server.js",
     "dev": "webpack --watch & nodemon server.js",
     "prod": "webpack -p",
-    "build-css": "node-sass --include-path scss scss/*.scss www/main.css"
+    "build-css": "node-sass --include-path scss scss/*.scss www/main.css",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -101,5 +104,6 @@
   "bugs": {
     "url": "https://github.com/hsandstromOM/demo-v1/issues"
   },
-  "homepage": "https://github.com/hsandstromOM/demo-v1#readme"
+  "homepage": "https://github.com/hsandstromOM/demo-v1#readme",
+  "snyk": true
 }
