@@ -61,7 +61,7 @@
     "nodemailer-sendgrid-transport": "^0.2.0",
     "palmettoflow-event": "^1.1.2",
     "palmettoflow-nodejs": "^1.0.1",
-    "pouchdb": "^5.0.0",
+    "pouchdb": "^6.3.0",
     "prerender-node": "^2.5.0",
     "progress-bar-webpack-plugin": "^1.9.0",
     "raw-loader": "^0.5.1",
