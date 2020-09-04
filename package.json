@@ -53,7 +53,7 @@
     "ng-annotate-loader": "^0.2.0",
     "ng-device-detector": "^3.0.1",
     "ngmap": "^1.17.8",
-    "node-sass": "^3.13.1",
+    "node-sass": "^4.14.1",
     "nodemailer": "^2.4.2",
     "nodemailer-mailgun-transport": "^1.2.2",
     "nodemailer-mailgunapi-transport": "0.0.3",
@@ -84,7 +84,7 @@
     "eslint-plugin-react": "^6.4.1",
     "jshint": "^2.9.4",
     "morgan": "^1.7.0",
-    "node-sass": "^3.13.1",
+    "node-sass": "^4.14.1",
     "nodemon": "^1.11.0"
   },
   "license": "MIT",
